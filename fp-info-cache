@@ -1,4 +1,4 @@
-17694778676269197
+17701317033844197
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -78602,6 +78602,34 @@ type2_direct
 0
 7
 7
+otter
+usb-temperature-logger-back-text
+
+
+0
+0
+0
+otter
+usb-temperature-logger-front-text
+
+
+0
+0
+0
+otter
+usb-temperature-logger-otter
+
+
+0
+0
+0
+otter
+usb-temperature-logger-text
+
+
+0
+0
+0
 otter
 wson8
 

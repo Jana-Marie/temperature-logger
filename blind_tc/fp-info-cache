@@ -1,4 +1,4 @@
-17693144125635197
+17698047853990197
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -77567,6 +77567,13 @@ Pads7.5x12
 1
 1
 otter
+PhoenixContact_MC_1,5_2-G-3.5_1x02_P3.50mm_Horizontal
+Generic Phoenix Contact connector footprint for: MC_1,5/2-G-3.5; number of pins: 02; pin pitch: 3.50mm; Angled || order number: 1844210 8A 160V
+phoenix_contact connector MC_01x02_G_3.5mm
+0
+2
+2
+otter
 PinHeader_1x01_P2.54mm_Vertical
 Through hole straight pin header, 1x01, 2.54mm pitch, single row
 Through hole pin header THT 1x01 2.54mm single row
@@ -78595,6 +78602,20 @@ type2_direct
 0
 7
 7
+otter
+usb-temperature-logger-otter
+
+
+0
+0
+0
+otter
+usb-temperature-logger-text
+
+
+0
+0
+0
 otter
 wson8
 
