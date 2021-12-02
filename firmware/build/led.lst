@@ -1,0 +1,227 @@
+ARM GAS  /tmp/ccgai1mE.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 0
+  10              		.eabi_attribute 18, 4
+  11              		.file	"led.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.led_set,"ax",%progbits
+  16              		.align	1
+  17              		.global	led_set
+  18              		.arch armv6s-m
+  19              		.syntax unified
+  20              		.code	16
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	led_set:
+  25              	.LVL0:
+  26              	.LFB40:
+  27              		.file 1 "Core/Src/led.c"
+   1:Core/Src/led.c **** #include "led.h"
+   2:Core/Src/led.c **** 
+   3:Core/Src/led.c **** void led_set(enum Led led, enum LedState state) {
+  28              		.loc 1 3 49 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 24
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		.loc 1 3 49 is_stmt 0 view .LVU1
+  33 0000 70B5     		push	{r4, r5, r6, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 16
+  36              		.cfi_offset 4, -16
+  37              		.cfi_offset 5, -12
+  38              		.cfi_offset 6, -8
+  39              		.cfi_offset 14, -4
+  40 0002 86B0     		sub	sp, sp, #24
+  41              	.LCFI1:
+  42              		.cfi_def_cfa_offset 40
+  43 0004 0400     		movs	r4, r0
+  44 0006 0D00     		movs	r5, r1
+   4:Core/Src/led.c **** 		GPIO_TypeDef * port;
+  45              		.loc 1 4 3 is_stmt 1 view .LVU2
+   5:Core/Src/led.c **** 		switch (led) {
+  46              		.loc 1 5 3 view .LVU3
+  47 0008 8023     		movs	r3, #128
+  48 000a 9B01     		lsls	r3, r3, #6
+  49 000c 9842     		cmp	r0, r3
+  50 000e 1DD0     		beq	.L6
+  51 0010 12D8     		bhi	.L3
+  52 0012 0128     		cmp	r0, #1
+  53 0014 1CD1     		bne	.L7
+ARM GAS  /tmp/ccgai1mE.s 			page 2
+
+
+   6:Core/Src/led.c **** 		case LED1:
+   7:Core/Src/led.c **** 		case LED2:
+   8:Core/Src/led.c ****     case LED3:
+   9:Core/Src/led.c **** 			port = GPIOC;
+  10:Core/Src/led.c **** 			break;
+  11:Core/Src/led.c **** 
+  12:Core/Src/led.c **** 		case LED0:
+  13:Core/Src/led.c **** 			port = GPIOF;
+  54              		.loc 1 13 9 is_stmt 0 view .LVU4
+  55 0016 174E     		ldr	r6, .L10
+  56              	.L2:
+  57              	.LVL1:
+  14:Core/Src/led.c **** 			break;
+  15:Core/Src/led.c **** 
+  16:Core/Src/led.c **** 
+  17:Core/Src/led.c **** 		case STATUS:
+  18:Core/Src/led.c ****     default:
+  19:Core/Src/led.c **** 			port = GPIOA;
+  20:Core/Src/led.c **** 			break;
+  21:Core/Src/led.c **** 		}
+  22:Core/Src/led.c **** 
+  23:Core/Src/led.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
+  58              		.loc 1 23 3 is_stmt 1 view .LVU5
+  59              		.loc 1 23 20 is_stmt 0 view .LVU6
+  60 0018 1022     		movs	r2, #16
+  61 001a 0021     		movs	r1, #0
+  62              	.LVL2:
+  63              		.loc 1 23 20 view .LVU7
+  64 001c 02A8     		add	r0, sp, #8
+  65              	.LVL3:
+  66              		.loc 1 23 20 view .LVU8
+  67 001e FFF7FEFF 		bl	memset
+  68              	.LVL4:
+  24:Core/Src/led.c ****   GPIO_InitStruct.Pin = led;
+  69              		.loc 1 24 3 is_stmt 1 view .LVU9
+  70              		.loc 1 24 23 is_stmt 0 view .LVU10
+  71 0022 0194     		str	r4, [sp, #4]
+  25:Core/Src/led.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+  72              		.loc 1 25 3 is_stmt 1 view .LVU11
+  26:Core/Src/led.c **** 	switch (state) {
+  73              		.loc 1 26 2 view .LVU12
+  74 0024 6B1C     		adds	r3, r5, #1
+  75 0026 1BD1     		bne	.L4
+  27:Core/Src/led.c **** 	case STATE_OFF:
+  28:Core/Src/led.c ****     GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  76              		.loc 1 28 5 view .LVU13
+  77              		.loc 1 28 26 is_stmt 0 view .LVU14
+  78 0028 0023     		movs	r3, #0
+  79 002a 0293     		str	r3, [sp, #8]
+  29:Core/Src/led.c ****     break;
+  80              		.loc 1 29 5 is_stmt 1 view .LVU15
+  81              	.L5:
+  30:Core/Src/led.c **** 	default:
+  31:Core/Src/led.c **** 		GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  32:Core/Src/led.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  33:Core/Src/led.c ****     HAL_GPIO_WritePin(port, led, state);
+  34:Core/Src/led.c ****     break;
+ARM GAS  /tmp/ccgai1mE.s 			page 3
+
+
+  35:Core/Src/led.c **** 	}
+  36:Core/Src/led.c ****   HAL_GPIO_Init(port, &GPIO_InitStruct);
+  82              		.loc 1 36 3 view .LVU16
+  83 002c 01A9     		add	r1, sp, #4
+  84 002e 3000     		movs	r0, r6
+  85 0030 FFF7FEFF 		bl	HAL_GPIO_Init
+  86              	.LVL5:
+  37:Core/Src/led.c **** }
+  87              		.loc 1 37 1 is_stmt 0 view .LVU17
+  88 0034 06B0     		add	sp, sp, #24
+  89              		@ sp needed
+  90              	.LVL6:
+  91              		.loc 1 37 1 view .LVU18
+  92 0036 70BD     		pop	{r4, r5, r6, pc}
+  93              	.LVL7:
+  94              	.L3:
+   5:Core/Src/led.c **** 		case LED1:
+  95              		.loc 1 5 3 view .LVU19
+  96 0038 8023     		movs	r3, #128
+  97 003a DB01     		lsls	r3, r3, #7
+  98 003c 9842     		cmp	r0, r3
+  99 003e 0AD0     		beq	.L8
+ 100 0040 8023     		movs	r3, #128
+ 101 0042 1B02     		lsls	r3, r3, #8
+ 102 0044 9842     		cmp	r0, r3
+ 103 0046 08D1     		bne	.L9
+ 104 0048 0B4E     		ldr	r6, .L10+4
+ 105 004a E5E7     		b	.L2
+ 106              	.L6:
+ 107 004c 0A4E     		ldr	r6, .L10+4
+ 108 004e E3E7     		b	.L2
+ 109              	.L7:
+  19:Core/Src/led.c **** 			break;
+ 110              		.loc 1 19 9 view .LVU20
+ 111 0050 9026     		movs	r6, #144
+ 112 0052 F605     		lsls	r6, r6, #23
+ 113 0054 E0E7     		b	.L2
+ 114              	.L8:
+   5:Core/Src/led.c **** 		case LED1:
+ 115              		.loc 1 5 3 view .LVU21
+ 116 0056 084E     		ldr	r6, .L10+4
+ 117 0058 DEE7     		b	.L2
+ 118              	.L9:
+  19:Core/Src/led.c **** 			break;
+ 119              		.loc 1 19 9 view .LVU22
+ 120 005a 9026     		movs	r6, #144
+ 121 005c F605     		lsls	r6, r6, #23
+ 122 005e DBE7     		b	.L2
+ 123              	.LVL8:
+ 124              	.L4:
+  31:Core/Src/led.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 125              		.loc 1 31 3 is_stmt 1 view .LVU23
+  31:Core/Src/led.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 126              		.loc 1 31 24 is_stmt 0 view .LVU24
+ 127 0060 0123     		movs	r3, #1
+ 128 0062 0293     		str	r3, [sp, #8]
+  32:Core/Src/led.c ****     HAL_GPIO_WritePin(port, led, state);
+ARM GAS  /tmp/ccgai1mE.s 			page 4
+
+
+ 129              		.loc 1 32 5 is_stmt 1 view .LVU25
+  32:Core/Src/led.c ****     HAL_GPIO_WritePin(port, led, state);
+ 130              		.loc 1 32 27 is_stmt 0 view .LVU26
+ 131 0064 0023     		movs	r3, #0
+ 132 0066 0493     		str	r3, [sp, #16]
+  33:Core/Src/led.c ****     break;
+ 133              		.loc 1 33 5 is_stmt 1 view .LVU27
+ 134 0068 EAB2     		uxtb	r2, r5
+ 135 006a 2100     		movs	r1, r4
+ 136 006c 3000     		movs	r0, r6
+ 137 006e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 138              	.LVL9:
+  34:Core/Src/led.c **** 	}
+ 139              		.loc 1 34 5 view .LVU28
+ 140 0072 DBE7     		b	.L5
+ 141              	.L11:
+ 142              		.align	2
+ 143              	.L10:
+ 144 0074 00140048 		.word	1207964672
+ 145 0078 00080048 		.word	1207961600
+ 146              		.cfi_endproc
+ 147              	.LFE40:
+ 149              		.text
+ 150              	.Letext0:
+ 151              		.file 2 "/usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h"
+ 152              		.file 3 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h"
+ 153              		.file 4 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f072xb.h"
+ 154              		.file 5 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h"
+ 155              		.file 6 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
+ 156              		.file 7 "Core/Inc/led.h"
+ 157              		.file 8 "<built-in>"
+ARM GAS  /tmp/ccgai1mE.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 led.c
+     /tmp/ccgai1mE.s:16     .text.led_set:0000000000000000 $t
+     /tmp/ccgai1mE.s:24     .text.led_set:0000000000000000 led_set
+     /tmp/ccgai1mE.s:144    .text.led_set:0000000000000074 $d
+
+UNDEFINED SYMBOLS
+memset
+HAL_GPIO_Init
+HAL_GPIO_WritePin

@@ -1,0 +1,251 @@
+ARM GAS  /tmp/ccKvCisI.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 0
+  10              		.eabi_attribute 18, 4
+  11              		.file	"usb_device.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.MX_USB_DEVICE_Init,"ax",%progbits
+  16              		.align	1
+  17              		.global	MX_USB_DEVICE_Init
+  18              		.arch armv6s-m
+  19              		.syntax unified
+  20              		.code	16
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	MX_USB_DEVICE_Init:
+  25              	.LFB43:
+  26              		.file 1 "USB_DEVICE/App/usb_device.c"
+   1:USB_DEVICE/App/usb_device.c **** /* USER CODE BEGIN Header */
+   2:USB_DEVICE/App/usb_device.c **** /**
+   3:USB_DEVICE/App/usb_device.c ****   ******************************************************************************
+   4:USB_DEVICE/App/usb_device.c ****   * @file           : usb_device.c
+   5:USB_DEVICE/App/usb_device.c ****   * @version        : v2.0_Cube
+   6:USB_DEVICE/App/usb_device.c ****   * @brief          : This file implements the USB Device
+   7:USB_DEVICE/App/usb_device.c ****   ******************************************************************************
+   8:USB_DEVICE/App/usb_device.c ****   * @attention
+   9:USB_DEVICE/App/usb_device.c ****   *
+  10:USB_DEVICE/App/usb_device.c ****   * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
+  11:USB_DEVICE/App/usb_device.c ****   * All rights reserved.</center></h2>
+  12:USB_DEVICE/App/usb_device.c ****   *
+  13:USB_DEVICE/App/usb_device.c ****   * This software component is licensed by ST under Ultimate Liberty license
+  14:USB_DEVICE/App/usb_device.c ****   * SLA0044, the "License"; You may not use this file except in compliance with
+  15:USB_DEVICE/App/usb_device.c ****   * the License. You may obtain a copy of the License at:
+  16:USB_DEVICE/App/usb_device.c ****   *                             www.st.com/SLA0044
+  17:USB_DEVICE/App/usb_device.c ****   *
+  18:USB_DEVICE/App/usb_device.c ****   ******************************************************************************
+  19:USB_DEVICE/App/usb_device.c ****   */
+  20:USB_DEVICE/App/usb_device.c **** /* USER CODE END Header */
+  21:USB_DEVICE/App/usb_device.c **** 
+  22:USB_DEVICE/App/usb_device.c **** /* Includes ------------------------------------------------------------------*/
+  23:USB_DEVICE/App/usb_device.c **** 
+  24:USB_DEVICE/App/usb_device.c **** #include "usb_device.h"
+  25:USB_DEVICE/App/usb_device.c **** #include "usbd_core.h"
+  26:USB_DEVICE/App/usb_device.c **** #include "usbd_desc.h"
+  27:USB_DEVICE/App/usb_device.c **** #include "usbd_cdc.h"
+  28:USB_DEVICE/App/usb_device.c **** #include "usbd_cdc_if.h"
+  29:USB_DEVICE/App/usb_device.c **** 
+  30:USB_DEVICE/App/usb_device.c **** /* USER CODE BEGIN Includes */
+  31:USB_DEVICE/App/usb_device.c **** 
+  32:USB_DEVICE/App/usb_device.c **** /* USER CODE END Includes */
+ARM GAS  /tmp/ccKvCisI.s 			page 2
+
+
+  33:USB_DEVICE/App/usb_device.c **** 
+  34:USB_DEVICE/App/usb_device.c **** /* USER CODE BEGIN PV */
+  35:USB_DEVICE/App/usb_device.c **** /* Private variables ---------------------------------------------------------*/
+  36:USB_DEVICE/App/usb_device.c **** 
+  37:USB_DEVICE/App/usb_device.c **** /* USER CODE END PV */
+  38:USB_DEVICE/App/usb_device.c **** 
+  39:USB_DEVICE/App/usb_device.c **** /* USER CODE BEGIN PFP */
+  40:USB_DEVICE/App/usb_device.c **** /* Private function prototypes -----------------------------------------------*/
+  41:USB_DEVICE/App/usb_device.c **** 
+  42:USB_DEVICE/App/usb_device.c **** /* USER CODE END PFP */
+  43:USB_DEVICE/App/usb_device.c **** 
+  44:USB_DEVICE/App/usb_device.c **** /* USB Device Core handle declaration. */
+  45:USB_DEVICE/App/usb_device.c **** USBD_HandleTypeDef hUsbDeviceFS;
+  46:USB_DEVICE/App/usb_device.c **** 
+  47:USB_DEVICE/App/usb_device.c **** /*
+  48:USB_DEVICE/App/usb_device.c ****  * -- Insert your variables declaration here --
+  49:USB_DEVICE/App/usb_device.c ****  */
+  50:USB_DEVICE/App/usb_device.c **** /* USER CODE BEGIN 0 */
+  51:USB_DEVICE/App/usb_device.c **** 
+  52:USB_DEVICE/App/usb_device.c **** /* USER CODE END 0 */
+  53:USB_DEVICE/App/usb_device.c **** 
+  54:USB_DEVICE/App/usb_device.c **** /*
+  55:USB_DEVICE/App/usb_device.c ****  * -- Insert your external function declaration here --
+  56:USB_DEVICE/App/usb_device.c ****  */
+  57:USB_DEVICE/App/usb_device.c **** /* USER CODE BEGIN 1 */
+  58:USB_DEVICE/App/usb_device.c **** 
+  59:USB_DEVICE/App/usb_device.c **** /* USER CODE END 1 */
+  60:USB_DEVICE/App/usb_device.c **** 
+  61:USB_DEVICE/App/usb_device.c **** /**
+  62:USB_DEVICE/App/usb_device.c ****   * Init USB device Library, add supported class and start the library
+  63:USB_DEVICE/App/usb_device.c ****   * @retval None
+  64:USB_DEVICE/App/usb_device.c ****   */
+  65:USB_DEVICE/App/usb_device.c **** void MX_USB_DEVICE_Init(void)
+  66:USB_DEVICE/App/usb_device.c **** {
+  27              		.loc 1 66 1 view -0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31 0000 10B5     		push	{r4, lr}
+  32              	.LCFI0:
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+  67:USB_DEVICE/App/usb_device.c ****   /* USER CODE BEGIN USB_DEVICE_Init_PreTreatment */
+  68:USB_DEVICE/App/usb_device.c **** 
+  69:USB_DEVICE/App/usb_device.c ****   /* USER CODE END USB_DEVICE_Init_PreTreatment */
+  70:USB_DEVICE/App/usb_device.c **** 
+  71:USB_DEVICE/App/usb_device.c ****   /* Init Device Library, add supported class and start the library. */
+  72:USB_DEVICE/App/usb_device.c ****   if (USBD_Init(&hUsbDeviceFS, &FS_Desc, DEVICE_FS) != USBD_OK)
+  36              		.loc 1 72 3 view .LVU1
+  37              		.loc 1 72 7 is_stmt 0 view .LVU2
+  38 0002 0022     		movs	r2, #0
+  39 0004 1149     		ldr	r1, .L10
+  40 0006 1248     		ldr	r0, .L10+4
+  41 0008 FFF7FEFF 		bl	USBD_Init
+  42              	.LVL0:
+  43              		.loc 1 72 6 view .LVU3
+ARM GAS  /tmp/ccKvCisI.s 			page 3
+
+
+  44 000c 0028     		cmp	r0, #0
+  45 000e 11D1     		bne	.L6
+  46              	.L2:
+  73:USB_DEVICE/App/usb_device.c ****   {
+  74:USB_DEVICE/App/usb_device.c ****     Error_Handler();
+  75:USB_DEVICE/App/usb_device.c ****   }
+  76:USB_DEVICE/App/usb_device.c ****   if (USBD_RegisterClass(&hUsbDeviceFS, &USBD_CDC) != USBD_OK)
+  47              		.loc 1 76 3 is_stmt 1 view .LVU4
+  48              		.loc 1 76 7 is_stmt 0 view .LVU5
+  49 0010 1049     		ldr	r1, .L10+8
+  50 0012 0F48     		ldr	r0, .L10+4
+  51 0014 FFF7FEFF 		bl	USBD_RegisterClass
+  52              	.LVL1:
+  53              		.loc 1 76 6 view .LVU6
+  54 0018 0028     		cmp	r0, #0
+  55 001a 0ED1     		bne	.L7
+  56              	.L3:
+  77:USB_DEVICE/App/usb_device.c ****   {
+  78:USB_DEVICE/App/usb_device.c ****     Error_Handler();
+  79:USB_DEVICE/App/usb_device.c ****   }
+  80:USB_DEVICE/App/usb_device.c ****   if (USBD_CDC_RegisterInterface(&hUsbDeviceFS, &USBD_Interface_fops_FS) != USBD_OK)
+  57              		.loc 1 80 3 is_stmt 1 view .LVU7
+  58              		.loc 1 80 7 is_stmt 0 view .LVU8
+  59 001c 0E49     		ldr	r1, .L10+12
+  60 001e 0C48     		ldr	r0, .L10+4
+  61 0020 FFF7FEFF 		bl	USBD_CDC_RegisterInterface
+  62              	.LVL2:
+  63              		.loc 1 80 6 view .LVU9
+  64 0024 0028     		cmp	r0, #0
+  65 0026 0BD1     		bne	.L8
+  66              	.L4:
+  81:USB_DEVICE/App/usb_device.c ****   {
+  82:USB_DEVICE/App/usb_device.c ****     Error_Handler();
+  83:USB_DEVICE/App/usb_device.c ****   }
+  84:USB_DEVICE/App/usb_device.c ****   if (USBD_Start(&hUsbDeviceFS) != USBD_OK)
+  67              		.loc 1 84 3 is_stmt 1 view .LVU10
+  68              		.loc 1 84 7 is_stmt 0 view .LVU11
+  69 0028 0948     		ldr	r0, .L10+4
+  70 002a FFF7FEFF 		bl	USBD_Start
+  71              	.LVL3:
+  72              		.loc 1 84 6 view .LVU12
+  73 002e 0028     		cmp	r0, #0
+  74 0030 09D1     		bne	.L9
+  75              	.L1:
+  85:USB_DEVICE/App/usb_device.c ****   {
+  86:USB_DEVICE/App/usb_device.c ****     Error_Handler();
+  87:USB_DEVICE/App/usb_device.c ****   }
+  88:USB_DEVICE/App/usb_device.c **** 
+  89:USB_DEVICE/App/usb_device.c ****   /* USER CODE BEGIN USB_DEVICE_Init_PostTreatment */
+  90:USB_DEVICE/App/usb_device.c **** 
+  91:USB_DEVICE/App/usb_device.c ****   /* USER CODE END USB_DEVICE_Init_PostTreatment */
+  92:USB_DEVICE/App/usb_device.c **** }
+  76              		.loc 1 92 1 view .LVU13
+  77              		@ sp needed
+  78 0032 10BD     		pop	{r4, pc}
+  79              	.L6:
+  74:USB_DEVICE/App/usb_device.c ****   }
+ARM GAS  /tmp/ccKvCisI.s 			page 4
+
+
+  80              		.loc 1 74 5 is_stmt 1 view .LVU14
+  81 0034 FFF7FEFF 		bl	Error_Handler
+  82              	.LVL4:
+  83 0038 EAE7     		b	.L2
+  84              	.L7:
+  78:USB_DEVICE/App/usb_device.c ****   }
+  85              		.loc 1 78 5 view .LVU15
+  86 003a FFF7FEFF 		bl	Error_Handler
+  87              	.LVL5:
+  88 003e EDE7     		b	.L3
+  89              	.L8:
+  82:USB_DEVICE/App/usb_device.c ****   }
+  90              		.loc 1 82 5 view .LVU16
+  91 0040 FFF7FEFF 		bl	Error_Handler
+  92              	.LVL6:
+  93 0044 F0E7     		b	.L4
+  94              	.L9:
+  86:USB_DEVICE/App/usb_device.c ****   }
+  95              		.loc 1 86 5 view .LVU17
+  96 0046 FFF7FEFF 		bl	Error_Handler
+  97              	.LVL7:
+  98              		.loc 1 92 1 is_stmt 0 view .LVU18
+  99 004a F2E7     		b	.L1
+ 100              	.L11:
+ 101              		.align	2
+ 102              	.L10:
+ 103 004c 00000000 		.word	FS_Desc
+ 104 0050 00000000 		.word	hUsbDeviceFS
+ 105 0054 00000000 		.word	USBD_CDC
+ 106 0058 00000000 		.word	USBD_Interface_fops_FS
+ 107              		.cfi_endproc
+ 108              	.LFE43:
+ 110              		.comm	hUsbDeviceFS,708,4
+ 111              		.text
+ 112              	.Letext0:
+ 113              		.file 2 "/usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h"
+ 114              		.file 3 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h"
+ 115              		.file 4 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
+ 116              		.file 5 "/usr/lib/gcc/arm-none-eabi/9.2.1/include/stddef.h"
+ 117              		.file 6 "/usr/include/newlib/sys/_types.h"
+ 118              		.file 7 "/usr/include/newlib/sys/reent.h"
+ 119              		.file 8 "/usr/include/newlib/sys/lock.h"
+ 120              		.file 9 "/usr/include/newlib/stdlib.h"
+ 121              		.file 10 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
+ 122              		.file 11 "USB_DEVICE/App/usbd_desc.h"
+ 123              		.file 12 "Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h"
+ 124              		.file 13 "USB_DEVICE/App/usbd_cdc_if.h"
+ 125              		.file 14 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h"
+ 126              		.file 15 "Core/Inc/main.h"
+ARM GAS  /tmp/ccKvCisI.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 usb_device.c
+     /tmp/ccKvCisI.s:16     .text.MX_USB_DEVICE_Init:0000000000000000 $t
+     /tmp/ccKvCisI.s:24     .text.MX_USB_DEVICE_Init:0000000000000000 MX_USB_DEVICE_Init
+     /tmp/ccKvCisI.s:103    .text.MX_USB_DEVICE_Init:000000000000004c $d
+                            *COM*:00000000000002c4 hUsbDeviceFS
+
+UNDEFINED SYMBOLS
+USBD_Init
+USBD_RegisterClass
+USBD_CDC_RegisterInterface
+USBD_Start
+Error_Handler
+FS_Desc
+USBD_CDC
+USBD_Interface_fops_FS
