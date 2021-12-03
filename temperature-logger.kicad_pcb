@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 45)
+    (drawings 48)
     (tracks 1282)
     (zones 0)
     (modules 157)
@@ -2225,11 +2225,6 @@
       (net 2 GND))
     (pad MP thru_hole circle (at 7.9 0 180) (size 3.5 3.5) (drill 1.77) (layers *.Cu *.Mask)
       (net 2 GND))
-    (model /home/janamarie/kiCAD/stepfiles/PCC-SMP-K.step
-      (offset (xyz 0 -2.5 0))
-      (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 180))
-    )
   )
 
   (module otter:C_0402 (layer F.Cu) (tedit 5E580EF6) (tstamp 616E445D)
@@ -5809,6 +5804,11 @@
       (net 2 GND))
     (pad 1 thru_hole circle (at 0 0) (size 6.4 6.4) (drill 3.2) (layers *.Cu *.Mask)
       (net 2 GND))
+    (model ${KIPRJMOD}/3D/spacer_right.step
+      (offset (xyz 0 -20 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module MountingHole:MountingHole_3.2mm_M3_Pad_Via (layer F.Cu) (tedit 56DDBCCA) (tstamp 616CD846)
@@ -5846,13 +5846,8 @@
       (net 2 GND))
     (pad 1 thru_hole circle (at 0 0) (size 6.4 6.4) (drill 3.2) (layers *.Cu *.Mask)
       (net 2 GND))
-    (model ${KIPRJMOD}/outfiles/part.step
-      (offset (xyz -5.1 7.5 0))
-      (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
-    )
-    (model ${KIPRJMOD}/blind_tc/blind_tc.step
-      (offset (xyz 0 0 8))
+    (model ${KIPRJMOD}/3D/spacer_left.step
+      (offset (xyz 0 -20 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
@@ -6914,6 +6909,9 @@
     )
   )
 
+  (gr_line (start 117.375 50) (end 113.375 50) (layer Eco1.User) (width 0.15))
+  (gr_line (start 129.575 50) (end 117.375 50) (layer Eco1.User) (width 0.15))
+  (gr_line (start 140.5 50) (end 129.575 50) (layer Eco1.User) (width 0.15))
   (gr_text IN3 (at 69.975 98.5) (layer B.SilkS) (tstamp 616DCFE1)
     (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
   )

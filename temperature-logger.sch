@@ -1220,17 +1220,6 @@ Wire Wire Line
 Connection ~ 7650 5400
 Wire Wire Line
 	7650 5400 7650 5350
-$Comp
-L Device:C_Small C24
-U 1 1 616EF009
-P 7800 5550
-F 0 "C24" H 7708 5504 50  0000 R CNN
-F 1 "100n" H 7708 5595 50  0000 R CNN
-F 2 "otter:C_0402" H 7800 5550 50  0001 C CNN
-F 3 "~" H 7800 5550 50  0001 C CNN
-	1    7800 5550
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	7800 5450 7800 5400
 Wire Wire Line
@@ -1249,7 +1238,7 @@ Text GLabel 8150 3300 2    50   Input ~ 0
 NTC0
 Text GLabel 8150 3100 2    50   Input ~ 0
 NTC1
-Text GLabel 8150 3400 2    50   Input ~ 0
+Text GLabel 6850 2600 0    50   Input ~ 0
 NTC_BOARD
 Text GLabel 9450 4200 0    50   Input ~ 0
 NTC3
@@ -1274,4 +1263,17 @@ F 3 "~" H 8300 5600 50  0001 C CNN
 	1    8300 5550
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:C_Small C24
+U 1 1 616EF009
+P 7800 5550
+F 0 "C24" H 7708 5504 50  0000 R CNN
+F 1 "100n" H 7708 5595 50  0000 R CNN
+F 2 "otter:C_0402" H 7800 5550 50  0001 C CNN
+F 3 "~" H 7800 5550 50  0001 C CNN
+	1    7800 5550
+	-1   0    0    1   
+$EndComp
+NoConn ~ 3100 2800
+NoConn ~ 3100 2700
 $EndSCHEMATC
