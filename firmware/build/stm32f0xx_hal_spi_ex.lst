@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cckNLg63.s 			page 1
+ARM GAS  /tmp/cc0Xuivh.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cckNLg63.s 			page 1
   29:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.c ****   */
   30:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.c **** 
   31:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.c **** /** @defgroup SPIEx SPIEx
-ARM GAS  /tmp/cckNLg63.s 			page 2
+ARM GAS  /tmp/cc0Xuivh.s 			page 2
 
 
   32:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.c ****   * @brief SPI Extended HAL module driver
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cckNLg63.s 			page 1
   32              		.loc 1 81 1 is_stmt 0 view .LVU1
   33 0000 10B5     		push	{r4, lr}
   34              	.LCFI0:
-ARM GAS  /tmp/cckNLg63.s 			page 3
+ARM GAS  /tmp/cc0Xuivh.s 			page 3
 
 
   35              		.cfi_def_cfa_offset 8
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cckNLg63.s 			page 1
   78              		.loc 1 91 14 view .LVU20
   79 0020 0320     		movs	r0, #3
   80              	.LVL5:
-ARM GAS  /tmp/cckNLg63.s 			page 4
+ARM GAS  /tmp/cc0Xuivh.s 			page 4
 
 
   81              	.L3:
@@ -210,12 +210,12 @@ ARM GAS  /tmp/cckNLg63.s 			page 1
  102              		.file 6 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma.h"
  103              		.file 7 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h"
  104              		.file 8 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
-ARM GAS  /tmp/cckNLg63.s 			page 5
+ARM GAS  /tmp/cc0Xuivh.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f0xx_hal_spi_ex.c
-     /tmp/cckNLg63.s:16     .text.HAL_SPIEx_FlushRxFifo:0000000000000000 $t
-     /tmp/cckNLg63.s:24     .text.HAL_SPIEx_FlushRxFifo:0000000000000000 HAL_SPIEx_FlushRxFifo
+     /tmp/cc0Xuivh.s:16     .text.HAL_SPIEx_FlushRxFifo:0000000000000000 $t
+     /tmp/cc0Xuivh.s:24     .text.HAL_SPIEx_FlushRxFifo:0000000000000000 HAL_SPIEx_FlushRxFifo
 
 NO UNDEFINED SYMBOLS

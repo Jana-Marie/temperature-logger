@@ -31,7 +31,13 @@ extern uint8_t CDC_Transmit_FS(uint8_t* Buf, uint16_t Len);
 float MAX31855_get_tcold(int32_t data);
 float MAX31855_get_twarm(int32_t data);
 
+float lsb_to_temp(uint16_t lsb);
+uint32_t lsb_to_volt(uint16_t lsb);
+float volt_to_temp(uint32_t volt);
+
 static uint32_t adc[6];
+static uint32_t vadc[6];
+float tp[6];
 char tsv_str[96];
 
 static uint32_t spidat;
@@ -59,37 +65,28 @@ int main(void)
   //GPIOA, NSS3_Pin|NSS2_Pin|NSS1_Pin|NSS0_Pin
 
   led_set(STATUS, STATE_OFF);
-  //led_set(LED0, STATE_OFF);
-  //led_set(LED1, STATE_OFF);
-  //led_set(LED2, STATE_OFF);
+  led_set(LED0, STATE_OFF);
+  led_set(LED1, STATE_OFF);
+  led_set(LED2, STATE_OFF);
   led_set(LED3, STATE_OFF);
-  led_set(LED3, STATE_GREEN);
+  //led_set(LED3, STATE_GREEN);
 
   while (1)
   {
-    HAL_Delay(10);
-    led_set(STATUS, STATE_OFF);
   }
 }
 
+// MAX31855
 float MAX31855_get_tcold(int32_t data){
-  ///int16_t tint;
-  ///tint = (data >> 4) & 4095;
-  ///tint = (tint & 0b1000011111111111) | (((tint >> 11) & 1) << 15);
   data >>= 4;
-
-  // pull the bottom 11 bits off
   float internal = data & 0x7FF;
-  // check sign bit!
   if (data & 0x800) {
-    // Convert to negative value by extending sign and casting to signed type.
     int16_t tmp = 0xF800 | (data & 0x7FF);
     internal = tmp;
   }
   internal *= 0.0625; // LSB = 0.0625 degrees
   return internal;
 }
-
 
 float MAX31855_get_twarm(int32_t data){
   if (data & 0x80000000) {
@@ -101,18 +98,44 @@ float MAX31855_get_twarm(int32_t data){
   return (float)cent;
 }
 
+// NTC - OPAMP
+float lsb_to_temp(uint16_t lsb){
+  float v = (lsb/4095.0)*3.3;
+  return v;//23.1 + (7.73*vadc) + (0.247*(vadc*vadc));
+}
 
+float volt_to_temp(uint32_t volt){
+  float v = volt/1000.0;
+  return 23.1 + (7.73*v) + (0.247*(v*v));
+}
+
+uint32_t lsb_to_volt(uint16_t lsb){
+  uint32_t v = (lsb*3300)/4095;
+  return v;//23.1 + (7.73*vadc) + (0.247*(vadc*vadc));
+}
+
+// Interrupt
 void temp_timer(){
   led_set(STATUS, STATE_GREEN);
 
   spidat = __builtin_bswap32(spidat);
 
+  for(uint8_t i = 0; i <=5; i++){
+    vadc[i] = lsb_to_volt(adc[i]);
+  }
+
+  for(uint8_t i = 0; i <=5; i++){
+    tp[i] = volt_to_temp(vadc[i]);
+  }
+
   memset(tsv_str, 0, sizeof tsv_str);
-  sprintf(tsv_str, "%lu\t%lu\t%lu\t%lu\t%lu\t%.2f\t%.4f\n\r", adc[0],adc[2],adc[3],adc[4],adc[5],MAX31855_get_twarm(spidat),MAX31855_get_tcold(spidat));
+  sprintf(tsv_str, "%.4f\t%.4f\t%.4f\t%.4f\t%lu\n\r", tp[0], tp[1], tp[2], tp[3],HAL_GetTick());
   CDC_Transmit_FS((uint8_t *) &tsv_str, sizeof tsv_str);
 
   HAL_GPIO_WritePin(GPIOA, NSS3_Pin|NSS2_Pin|NSS1_Pin|NSS0_Pin, GPIO_PIN_RESET);
   HAL_SPI_Receive_DMA(&hspi1, (uint8_t *) &spidat, sizeof spidat);
+
+  led_set(STATUS, STATE_OFF);
 }
 
 void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef * hspi){
@@ -297,7 +320,7 @@ static void MX_TIM2_Init(void)
   htim2.Instance = TIM2;
   htim2.Init.Prescaler = 9999;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 960-1;
+  htim2.Init.Period = 479; //100ms
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   HAL_TIM_Base_Init(&htim2);

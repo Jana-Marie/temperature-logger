@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccDOZ2iK.s 			page 1
+ARM GAS  /tmp/ccoF6DxY.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccDOZ2iK.s 			page 1
   30:Core/Src/system_stm32f0xx.c ****   * License. You may obtain a copy of the License at:
   31:Core/Src/system_stm32f0xx.c ****   *                        opensource.org/licenses/BSD-3-Clause
   32:Core/Src/system_stm32f0xx.c ****   *
-ARM GAS  /tmp/ccDOZ2iK.s 			page 2
+ARM GAS  /tmp/ccoF6DxY.s 			page 2
 
 
   33:Core/Src/system_stm32f0xx.c ****   ******************************************************************************
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccDOZ2iK.s 			page 1
   87:Core/Src/system_stm32f0xx.c **** /**
   88:Core/Src/system_stm32f0xx.c ****   * @}
   89:Core/Src/system_stm32f0xx.c ****   */
-ARM GAS  /tmp/ccDOZ2iK.s 			page 3
+ARM GAS  /tmp/ccoF6DxY.s 			page 3
 
 
   90:Core/Src/system_stm32f0xx.c **** 
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccDOZ2iK.s 			page 1
   34 0000 7047     		bx	lr
   35              		.cfi_endproc
   36              	.LFE40:
-ARM GAS  /tmp/ccDOZ2iK.s 			page 4
+ARM GAS  /tmp/ccoF6DxY.s 			page 4
 
 
   38              		.global	__aeabi_uidiv
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccDOZ2iK.s 			page 1
   54              	.LCFI0:
   55              		.cfi_def_cfa_offset 8
   56              		.cfi_offset 4, -8
-ARM GAS  /tmp/ccDOZ2iK.s 			page 5
+ARM GAS  /tmp/ccoF6DxY.s 			page 5
 
 
   57              		.cfi_offset 14, -4
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccDOZ2iK.s 			page 1
  212:Core/Src/system_stm32f0xx.c ****  || defined(STM32F070xB) || defined(STM32F091xC) || defined(STM32F098xx)  || defined(STM32F030xC)
  213:Core/Src/system_stm32f0xx.c ****         /* HSI used as PLL clock source : SystemCoreClock = HSI/PREDIV * PLLMUL */
  214:Core/Src/system_stm32f0xx.c ****         SystemCoreClock = (HSI_VALUE/predivfactor) * pllmull;
-ARM GAS  /tmp/ccDOZ2iK.s 			page 6
+ARM GAS  /tmp/ccoF6DxY.s 			page 6
 
 
  215:Core/Src/system_stm32f0xx.c **** #else
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccDOZ2iK.s 			page 1
  109 002e 1D4A     		ldr	r2, .L12+12
  110 0030 D35C     		ldrb	r3, [r2, r3]
  111              	.LVL8:
-ARM GAS  /tmp/ccDOZ2iK.s 			page 7
+ARM GAS  /tmp/ccoF6DxY.s 			page 7
 
 
  230:Core/Src/system_stm32f0xx.c ****   /* HCLK clock frequency */
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccDOZ2iK.s 			page 1
  151              		.loc 1 193 27 is_stmt 0 view .LVU36
  152 0050 800C     		lsrs	r0, r0, #18
  153              	.LVL16:
-ARM GAS  /tmp/ccDOZ2iK.s 			page 8
+ARM GAS  /tmp/ccoF6DxY.s 			page 8
 
 
  193:Core/Src/system_stm32f0xx.c ****       predivfactor = (RCC->CFGR2 & RCC_CFGR2_PREDIV) + 1;
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccDOZ2iK.s 			page 1
  193              		.loc 1 199 9 is_stmt 1 view .LVU51
  199:Core/Src/system_stm32f0xx.c ****       }
  194              		.loc 1 199 37 is_stmt 0 view .LVU52
-ARM GAS  /tmp/ccDOZ2iK.s 			page 9
+ARM GAS  /tmp/ccoF6DxY.s 			page 9
 
 
  195 007c 0848     		ldr	r0, .L12+8
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccDOZ2iK.s 			page 1
  245 000d 070809   		.ascii	"\007\010\011"
  246              		.section	.rodata.APBPrescTable,"a"
  247              		.align	2
-ARM GAS  /tmp/ccDOZ2iK.s 			page 10
+ARM GAS  /tmp/ccoF6DxY.s 			page 10
 
 
  250              	APBPrescTable:
@@ -550,22 +550,22 @@ ARM GAS  /tmp/ccDOZ2iK.s 			page 1
  255              		.file 3 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h"
  256              		.file 4 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f072xb.h"
  257              		.file 5 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
-ARM GAS  /tmp/ccDOZ2iK.s 			page 11
+ARM GAS  /tmp/ccoF6DxY.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 system_stm32f0xx.c
-     /tmp/ccDOZ2iK.s:16     .text.SystemInit:0000000000000000 $t
-     /tmp/ccDOZ2iK.s:24     .text.SystemInit:0000000000000000 SystemInit
-     /tmp/ccDOZ2iK.s:40     .text.SystemCoreClockUpdate:0000000000000000 $t
-     /tmp/ccDOZ2iK.s:47     .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
-     /tmp/ccDOZ2iK.s:220    .text.SystemCoreClockUpdate:0000000000000098 $d
-     /tmp/ccDOZ2iK.s:250    .rodata.APBPrescTable:0000000000000000 APBPrescTable
-     /tmp/ccDOZ2iK.s:243    .rodata.AHBPrescTable:0000000000000000 AHBPrescTable
-     /tmp/ccDOZ2iK.s:236    .data.SystemCoreClock:0000000000000000 SystemCoreClock
-     /tmp/ccDOZ2iK.s:232    .data.SystemCoreClock:0000000000000000 $d
-     /tmp/ccDOZ2iK.s:239    .rodata.AHBPrescTable:0000000000000000 $d
-     /tmp/ccDOZ2iK.s:247    .rodata.APBPrescTable:0000000000000000 $d
+     /tmp/ccoF6DxY.s:16     .text.SystemInit:0000000000000000 $t
+     /tmp/ccoF6DxY.s:24     .text.SystemInit:0000000000000000 SystemInit
+     /tmp/ccoF6DxY.s:40     .text.SystemCoreClockUpdate:0000000000000000 $t
+     /tmp/ccoF6DxY.s:47     .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
+     /tmp/ccoF6DxY.s:220    .text.SystemCoreClockUpdate:0000000000000098 $d
+     /tmp/ccoF6DxY.s:250    .rodata.APBPrescTable:0000000000000000 APBPrescTable
+     /tmp/ccoF6DxY.s:243    .rodata.AHBPrescTable:0000000000000000 AHBPrescTable
+     /tmp/ccoF6DxY.s:236    .data.SystemCoreClock:0000000000000000 SystemCoreClock
+     /tmp/ccoF6DxY.s:232    .data.SystemCoreClock:0000000000000000 $d
+     /tmp/ccoF6DxY.s:239    .rodata.AHBPrescTable:0000000000000000 $d
+     /tmp/ccoF6DxY.s:247    .rodata.APBPrescTable:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 __aeabi_uidiv

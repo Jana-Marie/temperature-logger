@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccZl5C54.s 			page 1
+ARM GAS  /tmp/ccnaAMFS.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
   29:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   * <h2><center>&copy; Copyright (c) 2016 STMicroelectronics.
   30:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   * All rights reserved.</center></h2>
   31:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   *
-ARM GAS  /tmp/ccZl5C54.s 			page 2
+ARM GAS  /tmp/ccnaAMFS.s 			page 2
 
 
   32:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   * This software component is licensed by ST under BSD 3-Clause license,
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
   72:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****             - This function is added to ensure compatibility across platforms.
   73:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****    */
   74:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** 
-ARM GAS  /tmp/ccZl5C54.s 			page 3
+ARM GAS  /tmp/ccnaAMFS.s 			page 3
 
 
   75:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   return HAL_OK;
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
   96:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** 
   97:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   /* Set interrupt mask */
   98:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   USBx->CNTR = (uint16_t)winterruptmask;
-ARM GAS  /tmp/ccZl5C54.s 			page 4
+ARM GAS  /tmp/ccnaAMFS.s 			page 4
 
 
   77              		.loc 1 98 3 view .LVU12
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  118:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** 
  119:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   /* Clear interrupt mask */
  120:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   USBx->CNTR &= (uint16_t)(~winterruptmask);
-ARM GAS  /tmp/ccZl5C54.s 			page 5
+ARM GAS  /tmp/ccnaAMFS.s 			page 5
 
 
  114              		.loc 1 120 3 view .LVU20
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  138:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** 
  139:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   /* NOTE : - This function is not required by USB Device FS peripheral, it is used
  140:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****               only by USB OTG FS peripheral.
-ARM GAS  /tmp/ccZl5C54.s 			page 6
+ARM GAS  /tmp/ccnaAMFS.s 			page 6
 
 
  141:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****             - This function is added to ensure compatibility across platforms.
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  188              		.loc 1 161 14 is_stmt 0 view .LVU35
  189 0008 4022     		movs	r2, #64
  190 000a 0123     		movs	r3, #1
-ARM GAS  /tmp/ccZl5C54.s 			page 7
+ARM GAS  /tmp/ccnaAMFS.s 			page 7
 
 
  191 000c 8352     		strh	r3, [r0, r2]
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  183:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** {
  226              		.loc 1 183 1 is_stmt 1 view -0
  227              		.cfi_startproc
-ARM GAS  /tmp/ccZl5C54.s 			page 8
+ARM GAS  /tmp/ccnaAMFS.s 			page 8
 
 
  228              		@ args = 0, pretend = 0, frame = 0
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  199:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** 
  200:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****     case EP_TYPE_INTR:
  201:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****       wEpRegVal |= USB_EP_INTERRUPT;
-ARM GAS  /tmp/ccZl5C54.s 			page 9
+ARM GAS  /tmp/ccnaAMFS.s 			page 9
 
 
  202:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****       break;
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  302              		.loc 1 213 3 is_stmt 1 view .LVU70
  303 003e A64C     		ldr	r4, .L40+4
  304 0040 2243     		orrs	r2, r4
-ARM GAS  /tmp/ccZl5C54.s 			page 10
+ARM GAS  /tmp/ccnaAMFS.s 			page 10
 
 
  305              	.LVL18:
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  350 006c 5022     		movs	r2, #80
  351 006e 9C5A     		ldrh	r4, [r3, r2]
  352 0070 1C19     		adds	r4, r3, r4
-ARM GAS  /tmp/ccZl5C54.s 			page 11
+ARM GAS  /tmp/ccnaAMFS.s 			page 11
 
 
  353              	.LVL22:
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  406              		.loc 1 223 7 discriminator 3 view .LVU102
  224:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** 
  225:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****       if (ep->type != EP_TYPE_ISOC)
-ARM GAS  /tmp/ccZl5C54.s 			page 12
+ARM GAS  /tmp/ccnaAMFS.s 			page 12
 
 
  407              		.loc 1 225 7 discriminator 3 view .LVU103
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  455              		.loc 1 194 7 is_stmt 1 view .LVU120
  456 00ca B8E7     		b	.L11
  457              	.L36:
-ARM GAS  /tmp/ccZl5C54.s 			page 13
+ARM GAS  /tmp/ccnaAMFS.s 			page 13
 
 
  190:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   {
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  500 00ec 0A78     		ldrb	r2, [r1]
  501 00ee D200     		lsls	r2, r2, #3
  502 00f0 1219     		adds	r2, r2, r4
-ARM GAS  /tmp/ccZl5C54.s 			page 14
+ARM GAS  /tmp/ccnaAMFS.s 			page 14
 
 
  503 00f2 7D4C     		ldr	r4, .L40+20
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  554 0126 1480     		strh	r4, [r2]
  555              	.L22:
  556              		.loc 1 242 7 discriminator 13 view .LVU151
-ARM GAS  /tmp/ccZl5C54.s 			page 15
+ARM GAS  /tmp/ccnaAMFS.s 			page 15
 
 
  557              	.LBE10:
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  607              		.loc 1 246 7 discriminator 3 view .LVU170
  608 014a 6C4A     		ldr	r2, .L40+40
  609 014c 1140     		ands	r1, r2
-ARM GAS  /tmp/ccZl5C54.s 			page 16
+ARM GAS  /tmp/ccnaAMFS.s 			page 16
 
 
  610              	.LVL58:
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  283:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****         /* Configure NAK status for the Endpoint */
  284:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****         PCD_SET_EP_TX_STATUS(USBx, ep->num, USB_EP_TX_NAK);
  285:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****       }
-ARM GAS  /tmp/ccZl5C54.s 			page 17
+ARM GAS  /tmp/ccnaAMFS.s 			page 17
 
 
  286:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****       else
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  242:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****       PCD_CLEAR_RX_DTOG(USBx, ep->num);
  661              		.loc 1 242 7 discriminator 5 view .LVU189
  662 0172 6509     		lsrs	r5, r4, #5
-ARM GAS  /tmp/ccZl5C54.s 			page 18
+ARM GAS  /tmp/ccnaAMFS.s 			page 18
 
 
  663              	.LVL65:
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  705 019c 2C43     		orrs	r4, r5
  706 019e A4B2     		uxth	r4, r4
  707 01a0 1480     		strh	r4, [r2]
-ARM GAS  /tmp/ccZl5C54.s 			page 19
+ARM GAS  /tmp/ccnaAMFS.s 			page 19
 
 
  708              	.LVL70:
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  746              		.loc 1 264 5 discriminator 1 view .LVU217
  264:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** 
  747              		.loc 1 264 5 discriminator 1 view .LVU218
-ARM GAS  /tmp/ccZl5C54.s 			page 20
+ARM GAS  /tmp/ccnaAMFS.s 			page 20
 
 
  748              	.LVL74:
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  788 01e2 1488     		ldrh	r4, [r2]
  789              	.LVL80:
  269:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****       PCD_CLEAR_TX_DTOG(USBx, ep->num);
-ARM GAS  /tmp/ccZl5C54.s 			page 21
+ARM GAS  /tmp/ccnaAMFS.s 			page 21
 
 
  790              		.loc 1 269 7 view .LVU233
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  830              		.loc 1 270 7 discriminator 1 view .LVU247
  831 0202 1488     		ldrh	r4, [r2]
  832 0204 354D     		ldr	r5, .L40+8
-ARM GAS  /tmp/ccZl5C54.s 			page 22
+ARM GAS  /tmp/ccnaAMFS.s 			page 22
 
 
  833 0206 2540     		ands	r5, r4
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  272:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****       PCD_SET_EP_TX_STATUS(USBx, ep->num, USB_EP_TX_DIS);
  874              		.loc 1 272 7 is_stmt 1 discriminator 3 view .LVU261
  273:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****     }
-ARM GAS  /tmp/ccZl5C54.s 			page 23
+ARM GAS  /tmp/ccnaAMFS.s 			page 23
 
 
  875              		.loc 1 273 7 discriminator 3 view .LVU262
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  916 024c 2C43     		orrs	r4, r5
  917 024e A4B2     		uxth	r4, r4
  918 0250 1480     		strh	r4, [r2]
-ARM GAS  /tmp/ccZl5C54.s 			page 24
+ARM GAS  /tmp/ccnaAMFS.s 			page 24
 
 
  919              	.LBE25:
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  959              		.loc 1 279 7 discriminator 3 view .LVU289
  279:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** 
  960              		.loc 1 279 7 discriminator 3 view .LVU290
-ARM GAS  /tmp/ccZl5C54.s 			page 25
+ARM GAS  /tmp/ccnaAMFS.s 			page 25
 
 
  961 026e 0A78     		ldrb	r2, [r1]
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  1001 0290 A400     		lsls	r4, r4, #2
  1002 0292 1C19     		adds	r4, r3, r4
  1003 0294 2288     		ldrh	r2, [r4]
-ARM GAS  /tmp/ccZl5C54.s 			page 26
+ARM GAS  /tmp/ccnaAMFS.s 			page 26
 
 
  1004 0296 134D     		ldr	r5, .L40+16
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  1043              		.loc 1 292 7 discriminator 7 view .LVU319
  292:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****     }
  1044              		.loc 1 292 7 discriminator 7 view .LVU320
-ARM GAS  /tmp/ccZl5C54.s 			page 27
+ARM GAS  /tmp/ccnaAMFS.s 			page 27
 
 
  1045 02b4 084A     		ldr	r2, .L40+4
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  1093              		.section	.text.USB_DeactivateEndpoint,"ax",%progbits
  1094              		.align	1
  1095              		.global	USB_DeactivateEndpoint
-ARM GAS  /tmp/ccZl5C54.s 			page 28
+ARM GAS  /tmp/ccnaAMFS.s 			page 28
 
 
  1096              		.syntax unified
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  1137 0018 06D5     		bpl	.L45
  1138              	.LVL117:
  1139              		.loc 1 311 7 discriminator 1 view .LVU340
-ARM GAS  /tmp/ccZl5C54.s 			page 29
+ARM GAS  /tmp/ccnaAMFS.s 			page 29
 
 
  1140              	.LBB34:
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  323:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   }
  324:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   /*Double Buffer*/
  325:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   else
-ARM GAS  /tmp/ccZl5C54.s 			page 30
+ARM GAS  /tmp/ccnaAMFS.s 			page 30
 
 
  326:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   {
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  1204              		.loc 1 318 7 discriminator 1 view .LVU362
  1205              	.LBB37:
  318:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** 
-ARM GAS  /tmp/ccZl5C54.s 			page 31
+ARM GAS  /tmp/ccnaAMFS.s 			page 31
 
 
  1206              		.loc 1 318 7 discriminator 1 view .LVU363
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  1247              		.loc 1 321 7 is_stmt 0 discriminator 3 view .LVU376
  1248              	.LBE38:
  327:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****     {
-ARM GAS  /tmp/ccZl5C54.s 			page 32
+ARM GAS  /tmp/ccnaAMFS.s 			page 32
 
 
  1249              		.loc 1 327 5 is_stmt 1 view .LVU377
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  1289              	.LBB41:
  331:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** 
  1290              		.loc 1 331 7 discriminator 3 view .LVU392
-ARM GAS  /tmp/ccZl5C54.s 			page 33
+ARM GAS  /tmp/ccnaAMFS.s 			page 33
 
 
  331:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** 
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  1332              		.loc 1 334 7 discriminator 3 view .LVU405
  1333 00b6 294A     		ldr	r2, .L53+4
  1334 00b8 2243     		orrs	r2, r4
-ARM GAS  /tmp/ccZl5C54.s 			page 34
+ARM GAS  /tmp/ccnaAMFS.s 			page 34
 
 
  1335 00ba 92B2     		uxth	r2, r2
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  337:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****     }
  1375              		.loc 1 337 7 discriminator 3 view .LVU420
  1376 00dc 0B40     		ands	r3, r1
-ARM GAS  /tmp/ccZl5C54.s 			page 35
+ARM GAS  /tmp/ccnaAMFS.s 			page 35
 
 
  1377              	.LVL145:
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  1418              	.LBE47:
  342:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****       PCD_CLEAR_TX_DTOG(USBx, ep->num);
  1419              		.loc 1 342 7 is_stmt 1 discriminator 3 view .LVU434
-ARM GAS  /tmp/ccZl5C54.s 			page 36
+ARM GAS  /tmp/ccnaAMFS.s 			page 36
 
 
  1420              	.LBE46:
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  1459 011a 0B78     		ldrb	r3, [r1]
  1460 011c 9B00     		lsls	r3, r3, #2
  1461 011e C318     		adds	r3, r0, r3
-ARM GAS  /tmp/ccZl5C54.s 			page 37
+ARM GAS  /tmp/ccnaAMFS.s 			page 37
 
 
  1462 0120 1A88     		ldrh	r2, [r3]
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  1502 0144 9B00     		lsls	r3, r3, #2
  1503 0146 C018     		adds	r0, r0, r3
  1504              	.LVL159:
-ARM GAS  /tmp/ccZl5C54.s 			page 38
+ARM GAS  /tmp/ccnaAMFS.s 			page 38
 
 
  348:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****     }
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  367:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   /* IN endpoint */
  368:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   if (ep->is_in == 1U)
  369:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   {
-ARM GAS  /tmp/ccZl5C54.s 			page 39
+ARM GAS  /tmp/ccnaAMFS.s 			page 39
 
 
  370:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****     /*Multi packet transfer*/
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  424:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****             /* Write the user buffer to USB PMA */
  425:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****             USB_WritePMA(USBx, ep->xfer_buff, pmabuffer, (uint16_t)len);
  426:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****           }
-ARM GAS  /tmp/ccZl5C54.s 			page 40
+ARM GAS  /tmp/ccnaAMFS.s 			page 40
 
 
  427:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****           else
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  481:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****           pmabuffer = ep->pmaaddr1;
  482:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** 
  483:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****           /* Write the user buffer to USB PMA */
-ARM GAS  /tmp/ccZl5C54.s 			page 41
+ARM GAS  /tmp/ccnaAMFS.s 			page 41
 
 
  484:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****           USB_WritePMA(USBx, ep->xfer_buff, pmabuffer, (uint16_t)len);
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  538:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****         }
  539:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****       }
  540:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****       /* iso out double */
-ARM GAS  /tmp/ccZl5C54.s 			page 42
+ARM GAS  /tmp/ccnaAMFS.s 			page 42
 
 
  541:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****       else if (ep->type == EP_TYPE_ISOC)
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  1558 0006 0B78     		ldrb	r3, [r1]
  1559 0008 9B00     		lsls	r3, r3, #2
  1560 000a C018     		adds	r0, r0, r3
-ARM GAS  /tmp/ccZl5C54.s 			page 43
+ARM GAS  /tmp/ccnaAMFS.s 			page 43
 
 
  1561              	.LVL163:
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  1603 002a 0288     		ldrh	r2, [r0]
  1604 002c 064B     		ldr	r3, .L58+8
  1605 002e 1A40     		ands	r2, r3
-ARM GAS  /tmp/ccZl5C54.s 			page 44
+ARM GAS  /tmp/ccnaAMFS.s 			page 44
 
 
  1606              	.LVL170:
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  1649              		.cfi_offset 4, -8
  1650              		.cfi_offset 14, -4
  597:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   if (ep->doublebuffer == 0U)
-ARM GAS  /tmp/ccZl5C54.s 			page 45
+ARM GAS  /tmp/ccnaAMFS.s 			page 45
 
 
  1651              		.loc 1 597 3 is_stmt 1 view .LVU497
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  1699              		.loc 1 603 10 discriminator 3 view .LVU516
  1700 002a 012B     		cmp	r3, #1
  1701 002c 27D0     		beq	.L61
-ARM GAS  /tmp/ccZl5C54.s 			page 46
+ARM GAS  /tmp/ccnaAMFS.s 			page 46
 
 
  604:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****       {
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  1748              	.LVL184:
  1749              		.loc 1 611 7 discriminator 1 view .LVU532
  1750              	.LBB59:
-ARM GAS  /tmp/ccZl5C54.s 			page 47
+ARM GAS  /tmp/ccnaAMFS.s 			page 47
 
 
  1751              		.loc 1 611 7 discriminator 1 view .LVU533
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  617:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** 
  618:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   return HAL_OK;
  1800              		.loc 1 618 3 discriminator 7 view .LVU550
-ARM GAS  /tmp/ccZl5C54.s 			page 48
+ARM GAS  /tmp/ccnaAMFS.s 			page 48
 
 
  619:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** }
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  1842 000a 8152     		strh	r1, [r0, r2]
  634:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** 
  635:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   /* switch-off device */
-ARM GAS  /tmp/ccZl5C54.s 			page 49
+ARM GAS  /tmp/ccnaAMFS.s 			page 49
 
 
  636:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   USBx->CNTR = (uint16_t)(USB_CNTR_FRES | USB_CNTR_PDWN);
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  1881 0008 C252     		strh	r2, [r0, r3]
  1882              	.L69:
  654:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   }
-ARM GAS  /tmp/ccZl5C54.s 			page 50
+ARM GAS  /tmp/ccnaAMFS.s 			page 50
 
 
  655:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** 
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  1923 000e 7047     		bx	lr
  1924              	.L72:
  1925              		.align	2
-ARM GAS  /tmp/ccZl5C54.s 			page 51
+ARM GAS  /tmp/ccnaAMFS.s 			page 51
 
 
  1926              	.L71:
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  1970              		.fpu softvfp
  1972              	USB_ReadInterrupts:
  1973              	.LVL199:
-ARM GAS  /tmp/ccZl5C54.s 			page 52
+ARM GAS  /tmp/ccnaAMFS.s 			page 52
 
 
  1974              	.LFB54:
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  2009              		@ args = 0, pretend = 0, frame = 0
  2010              		@ frame_needed = 0, uses_anonymous_args = 0
  2011              		@ link register save eliminated.
-ARM GAS  /tmp/ccZl5C54.s 			page 53
+ARM GAS  /tmp/ccnaAMFS.s 			page 53
 
 
  705:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   USBx->CNTR |= (uint16_t)USB_CNTR_RESUME;
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  2053              		.loc 1 719 3 is_stmt 1 view .LVU598
  720:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** }
  2054              		.loc 1 720 1 is_stmt 0 view .LVU599
-ARM GAS  /tmp/ccZl5C54.s 			page 54
+ARM GAS  /tmp/ccnaAMFS.s 			page 54
 
 
  2055 000a 0020     		movs	r0, #0
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  737:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** 
  738:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   pdwVal = (__IO uint16_t *)(BaseAddr + 0x400U + ((uint32_t)wPMABufAddr * PMA_ACCESS));
  2095              		.loc 1 738 3 view .LVU610
-ARM GAS  /tmp/ccZl5C54.s 			page 55
+ARM GAS  /tmp/ccnaAMFS.s 			page 55
 
 
  2096              		.loc 1 738 48 is_stmt 0 view .LVU611
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  2136 0020 0231     		adds	r1, r1, #2
  2137              	.LVL216:
  740:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   {
-ARM GAS  /tmp/ccZl5C54.s 			page 56
+ARM GAS  /tmp/ccnaAMFS.s 			page 56
 
 
  2138              		.loc 1 740 24 is_stmt 1 discriminator 3 view .LVU630
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  368:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   {
  2183              		.loc 1 368 6 view .LVU641
  2184 0008 012A     		cmp	r2, #1
-ARM GAS  /tmp/ccZl5C54.s 			page 57
+ARM GAS  /tmp/ccnaAMFS.s 			page 57
 
 
  2185 000a 2ED0     		beq	.L165
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  2223              		.loc 1 516 7 is_stmt 1 view .LVU657
  2224 0028 2378     		ldrb	r3, [r4]
  2225 002a DB00     		lsls	r3, r3, #3
-ARM GAS  /tmp/ccZl5C54.s 			page 58
+ARM GAS  /tmp/ccnaAMFS.s 			page 58
 
 
  2226 002c 5B18     		adds	r3, r3, r1
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  2268 0052 2A88     		ldrh	r2, [r5]
  2269 0054 B34B     		ldr	r3, .L174+12
  2270 0056 1A40     		ands	r2, r3
-ARM GAS  /tmp/ccZl5C54.s 			page 59
+ARM GAS  /tmp/ccnaAMFS.s 			page 59
 
 
  2271              	.LVL229:
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  381:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****     {
  2311              		.loc 1 381 11 is_stmt 0 view .LVU684
  2312 0074 237B     		ldrb	r3, [r4, #12]
-ARM GAS  /tmp/ccZl5C54.s 			page 60
+ARM GAS  /tmp/ccnaAMFS.s 			page 60
 
 
  381:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****     {
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  480:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****           pmabuffer = ep->pmaaddr1;
  2352              		.loc 1 480 11 discriminator 1 view .LVU700
  480:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****           pmabuffer = ep->pmaaddr1;
-ARM GAS  /tmp/ccZl5C54.s 			page 61
+ARM GAS  /tmp/ccnaAMFS.s 			page 61
 
 
  2353              		.loc 1 480 11 discriminator 1 view .LVU701
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  2397 00c6 E288     		ldrh	r2, [r4, #6]
  2398 00c8 3300     		movs	r3, r6
  2399 00ca 6169     		ldr	r1, [r4, #20]
-ARM GAS  /tmp/ccZl5C54.s 			page 62
+ARM GAS  /tmp/ccnaAMFS.s 			page 62
 
 
  2400 00cc 2800     		movs	r0, r5
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  2441 00f0 1340     		ands	r3, r2
  2442              	.LVL250:
  498:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   }
-ARM GAS  /tmp/ccZl5C54.s 			page 63
+ARM GAS  /tmp/ccnaAMFS.s 			page 63
 
 
  2443              		.loc 1 498 5 is_stmt 1 view .LVU725
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  2483 0114 8749     		ldr	r1, .L174+28
  2484 0116 1140     		ands	r1, r2
  2485              	.LVL255:
-ARM GAS  /tmp/ccZl5C54.s 			page 64
+ARM GAS  /tmp/ccnaAMFS.s 			page 64
 
 
  394:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** 
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  2525 013c AA5A     		ldrh	r2, [r5, r2]
  2526 013e AA18     		adds	r2, r5, r2
  2527              	.LVL258:
-ARM GAS  /tmp/ccZl5C54.s 			page 65
+ARM GAS  /tmp/ccnaAMFS.s 			page 65
 
 
  403:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****             pmabuffer = ep->pmaaddr1;
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  403:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****             pmabuffer = ep->pmaaddr1;
  2570              		.loc 1 403 13 discriminator 8 view .LVU767
  2571 016c 0132     		adds	r2, r2, #1
-ARM GAS  /tmp/ccZl5C54.s 			page 66
+ARM GAS  /tmp/ccnaAMFS.s 			page 66
 
 
  2572              	.LVL265:
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  2615              	.L91:
  403:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****             pmabuffer = ep->pmaaddr1;
  2616              		.loc 1 403 13 is_stmt 0 discriminator 2 view .LVU779
-ARM GAS  /tmp/ccZl5C54.s 			page 67
+ARM GAS  /tmp/ccnaAMFS.s 			page 67
 
 
  2617              	.LBE73:
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  2655              		.loc 1 421 13 discriminator 1 view .LVU795
  2656              	.LVL277:
  421:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****             pmabuffer = ep->pmaaddr0;
-ARM GAS  /tmp/ccZl5C54.s 			page 68
+ARM GAS  /tmp/ccnaAMFS.s 			page 68
 
 
  2657              		.loc 1 421 13 discriminator 1 view .LVU796
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  2701              	.LVL282:
  403:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****             pmabuffer = ep->pmaaddr1;
  2702              		.loc 1 403 13 discriminator 16 view .LVU807
-ARM GAS  /tmp/ccZl5C54.s 			page 69
+ARM GAS  /tmp/ccnaAMFS.s 			page 69
 
 
  2703 01e4 DB00     		lsls	r3, r3, #3
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  421:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****             pmabuffer = ep->pmaaddr0;
  2745              		.loc 1 421 13 discriminator 10 view .LVU820
  2746 0208 9202     		lsls	r2, r2, #10
-ARM GAS  /tmp/ccZl5C54.s 			page 70
+ARM GAS  /tmp/ccnaAMFS.s 			page 70
 
 
  2747              	.LVL289:
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  2787              		.loc 1 422 23 is_stmt 0 discriminator 18 view .LVU834
  2788 022a 2289     		ldrh	r2, [r4, #8]
  2789              	.LVL294:
-ARM GAS  /tmp/ccZl5C54.s 			page 71
+ARM GAS  /tmp/ccnaAMFS.s 			page 71
 
 
  425:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****           }
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  430:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****             pmabuffer = ep->pmaaddr0;
  2832              		.loc 1 430 13 discriminator 1 view .LVU847
  2833              	.LBB82:
-ARM GAS  /tmp/ccZl5C54.s 			page 72
+ARM GAS  /tmp/ccnaAMFS.s 			page 72
 
 
  430:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****             pmabuffer = ep->pmaaddr0;
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  430:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****             pmabuffer = ep->pmaaddr0;
  2876              		.loc 1 430 13 discriminator 6 view .LVU860
  430:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****             pmabuffer = ep->pmaaddr0;
-ARM GAS  /tmp/ccZl5C54.s 			page 73
+ARM GAS  /tmp/ccnaAMFS.s 			page 73
 
 
  2877              		.loc 1 430 13 discriminator 6 view .LVU861
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  2920              	.LVL316:
  2921              	.L103:
  430:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****             pmabuffer = ep->pmaaddr0;
-ARM GAS  /tmp/ccZl5C54.s 			page 74
+ARM GAS  /tmp/ccnaAMFS.s 			page 74
 
 
  2922              		.loc 1 430 13 discriminator 14 view .LVU873
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  2961              		.loc 1 448 13 is_stmt 1 view .LVU888
  2962              	.LBB84:
  448:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****             pmabuffer = ep->pmaaddr1;
-ARM GAS  /tmp/ccZl5C54.s 			page 75
+ARM GAS  /tmp/ccnaAMFS.s 			page 75
 
 
  2963              		.loc 1 448 13 view .LVU889
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  3004 02f2 0A43     		orrs	r2, r1
  3005 02f4 92B2     		uxth	r2, r2
  3006 02f6 1A80     		strh	r2, [r3]
-ARM GAS  /tmp/ccZl5C54.s 			page 76
+ARM GAS  /tmp/ccnaAMFS.s 			page 76
 
 
  3007 02f8 37E0     		b	.L113
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  3048              	.L175:
  3049              		.align	2
  3050              	.L174:
-ARM GAS  /tmp/ccZl5C54.s 			page 77
+ARM GAS  /tmp/ccnaAMFS.s 			page 77
 
 
  3051 0318 06040000 		.word	1030
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  3094 0354 00D1     		bne	.L116
  448:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****             pmabuffer = ep->pmaaddr1;
  3095              		.loc 1 448 13 discriminator 12 view .LVU927
-ARM GAS  /tmp/ccZl5C54.s 			page 78
+ARM GAS  /tmp/ccnaAMFS.s 			page 78
 
 
  3096 0356 013A     		subs	r2, r2, #1
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  3139 037a EA5A     		ldrh	r2, [r5, r3]
  3140 037c AA18     		adds	r2, r5, r2
  3141              	.LVL343:
-ARM GAS  /tmp/ccZl5C54.s 			page 79
+ARM GAS  /tmp/ccnaAMFS.s 			page 79
 
 
  448:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****             pmabuffer = ep->pmaaddr1;
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  3183              		.loc 1 464 11 view .LVU951
  3184              	.LVL349:
  464:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****           pmabuffer = ep->pmaaddr0;
-ARM GAS  /tmp/ccZl5C54.s 			page 80
+ARM GAS  /tmp/ccnaAMFS.s 			page 80
 
 
  3185              		.loc 1 464 11 view .LVU952
@@ -4798,7 +4798,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  3227 03c6 3E2E     		cmp	r6, #62
  3228 03c8 07D8     		bhi	.L121
  480:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****           pmabuffer = ep->pmaaddr1;
-ARM GAS  /tmp/ccZl5C54.s 			page 81
+ARM GAS  /tmp/ccnaAMFS.s 			page 81
 
 
  3229              		.loc 1 480 11 discriminator 6 view .LVU965
@@ -4858,7 +4858,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  3271              	.L118:
  480:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****           pmabuffer = ep->pmaaddr1;
  3272              		.loc 1 480 11 discriminator 14 view .LVU978
-ARM GAS  /tmp/ccZl5C54.s 			page 82
+ARM GAS  /tmp/ccnaAMFS.s 			page 82
 
 
  3273              	.LBE68:
@@ -4918,7 +4918,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  3314              		.loc 1 489 11 is_stmt 1 view .LVU991
  489:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****           pmabuffer = ep->pmaaddr0;
  3315              		.loc 1 489 11 view .LVU992
-ARM GAS  /tmp/ccZl5C54.s 			page 83
+ARM GAS  /tmp/ccnaAMFS.s 			page 83
 
 
  3316 0412 002A     		cmp	r2, #0
@@ -4978,7 +4978,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  3358 0440 07D8     		bhi	.L127
  489:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****           pmabuffer = ep->pmaaddr0;
  3359              		.loc 1 489 11 discriminator 6 view .LVU1005
-ARM GAS  /tmp/ccZl5C54.s 			page 84
+ARM GAS  /tmp/ccnaAMFS.s 			page 84
 
 
  489:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****           pmabuffer = ep->pmaaddr0;
@@ -5038,7 +5038,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  489:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****           pmabuffer = ep->pmaaddr0;
  3402              		.loc 1 489 11 discriminator 14 view .LVU1018
  3403              	.LBE96:
-ARM GAS  /tmp/ccZl5C54.s 			page 85
+ARM GAS  /tmp/ccnaAMFS.s 			page 85
 
 
  3404              	.LBE95:
@@ -5098,7 +5098,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  3443 0484 FFF7FEFF 		bl	USB_WritePMA
  3444              	.LVL390:
  493:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****         }
-ARM GAS  /tmp/ccZl5C54.s 			page 86
+ARM GAS  /tmp/ccnaAMFS.s 			page 86
 
 
  3445              		.loc 1 493 11 discriminator 18 view .LVU1034
@@ -5158,7 +5158,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  3486              		.loc 1 516 7 discriminator 5 view .LVU1047
  516:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****     }
  3487              		.loc 1 516 7 discriminator 5 view .LVU1048
-ARM GAS  /tmp/ccZl5C54.s 			page 87
+ARM GAS  /tmp/ccnaAMFS.s 			page 87
 
 
  3488 04a6 5109     		lsrs	r1, r2, #5
@@ -5218,7 +5218,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  3529              		.loc 1 544 30 view .LVU1061
  3530 04ca 2369     		ldr	r3, [r4, #16]
  544:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****         {
-ARM GAS  /tmp/ccZl5C54.s 			page 88
+ARM GAS  /tmp/ccnaAMFS.s 			page 88
 
 
  3531              		.loc 1 544 12 view .LVU1062
@@ -5278,7 +5278,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  554:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****       }
  3571              		.loc 1 554 9 discriminator 1 view .LVU1077
  3572 04ec 002B     		cmp	r3, #0
-ARM GAS  /tmp/ccZl5C54.s 			page 89
+ARM GAS  /tmp/ccnaAMFS.s 			page 89
 
 
  3573 04ee 00D0     		beq	.LCB3886
@@ -5338,7 +5338,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  3613 050e A95A     		ldrh	r1, [r5, r2]
  3614 0510 6918     		adds	r1, r5, r1
  3615              	.LVL412:
-ARM GAS  /tmp/ccZl5C54.s 			page 90
+ARM GAS  /tmp/ccnaAMFS.s 			page 90
 
 
  554:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****       }
@@ -5398,7 +5398,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  3658 053a 14D1     		bne	.L140
  524:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** 
  3659              		.loc 1 524 9 discriminator 1 view .LVU1104
-ARM GAS  /tmp/ccZl5C54.s 			page 91
+ARM GAS  /tmp/ccnaAMFS.s 			page 91
 
 
  3660              	.LBB107:
@@ -5458,7 +5458,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  3702              	.LBE108:
  3703              	.LBE107:
  524:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** 
-ARM GAS  /tmp/ccZl5C54.s 			page 92
+ARM GAS  /tmp/ccnaAMFS.s 			page 92
 
 
  3704              		.loc 1 524 9 is_stmt 1 discriminator 18 view .LVU1117
@@ -5518,7 +5518,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  3743 0586 3D49     		ldr	r1, .L176+20
  3744 0588 0A40     		ands	r2, r1
  3745 058a 1A80     		strh	r2, [r3]
-ARM GAS  /tmp/ccZl5C54.s 			page 93
+ARM GAS  /tmp/ccnaAMFS.s 			page 93
 
 
  524:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** 
@@ -5578,7 +5578,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  3788              	.LVL432:
  524:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** 
  3789              		.loc 1 524 9 discriminator 7 view .LVU1145
-ARM GAS  /tmp/ccZl5C54.s 			page 94
+ARM GAS  /tmp/ccnaAMFS.s 			page 94
 
 
  3790 05ae D206     		lsls	r2, r2, #27
@@ -5638,7 +5638,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  3833 05d2 1980     		strh	r1, [r3]
  524:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** 
  3834              		.loc 1 524 9 is_stmt 1 discriminator 28 view .LVU1157
-ARM GAS  /tmp/ccZl5C54.s 			page 95
+ARM GAS  /tmp/ccnaAMFS.s 			page 95
 
 
  3835 05d4 0CE0     		b	.L147
@@ -5698,7 +5698,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  3876 05f4 00D1     		bne	.LCB4258
  3877 05f6 29E5     		b	.L135	@long jump
  3878              	.LCB4258:
-ARM GAS  /tmp/ccZl5C54.s 			page 96
+ARM GAS  /tmp/ccnaAMFS.s 			page 96
 
 
  530:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** 
@@ -5758,7 +5758,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  3920              	.LBB118:
  524:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c **** 
  3921              		.loc 1 524 9 discriminator 34 view .LVU1184
-ARM GAS  /tmp/ccZl5C54.s 			page 97
+ARM GAS  /tmp/ccnaAMFS.s 			page 97
 
 
  3922 061e 4F33     		adds	r3, r3, #79
@@ -5818,7 +5818,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  3964 0644 D807     		lsls	r0, r3, #31
  3965 0646 00D5     		bpl	.L157
  3966              	.LVL454:
-ARM GAS  /tmp/ccZl5C54.s 			page 98
+ARM GAS  /tmp/ccnaAMFS.s 			page 98
 
 
  554:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****       }
@@ -5878,7 +5878,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  4011 067c FF83FFFF 		.word	-31745
  4012 0680 40400000 		.word	16448
  4013 0684 8F8FFFFF 		.word	-28785
-ARM GAS  /tmp/ccZl5C54.s 			page 99
+ARM GAS  /tmp/ccnaAMFS.s 			page 99
 
 
  4014 0688 C080FFFF 		.word	-32576
@@ -5938,7 +5938,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  554:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****       }
  4056              		.loc 1 554 9 discriminator 30 view .LVU1219
  4057 06a6 0139     		subs	r1, r1, #1
-ARM GAS  /tmp/ccZl5C54.s 			page 100
+ARM GAS  /tmp/ccnaAMFS.s 			page 100
 
 
  4058              	.LVL470:
@@ -5998,7 +5998,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  554:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****       }
  4103              		.loc 1 554 9 discriminator 34 view .LVU1229
  4104              	.LBE120:
-ARM GAS  /tmp/ccZl5C54.s 			page 101
+ARM GAS  /tmp/ccnaAMFS.s 			page 101
 
 
  558:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****       }
@@ -6058,7 +6058,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  769:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   __IO uint16_t *pdwVal;
  4145              		.loc 1 769 3 view .LVU1238
  770:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   uint8_t *pBuf = pbUsrBuf;
-ARM GAS  /tmp/ccZl5C54.s 			page 102
+ARM GAS  /tmp/ccnaAMFS.s 			page 102
 
 
  4146              		.loc 1 770 3 view .LVU1239
@@ -6118,7 +6118,7 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  4188              		.loc 1 774 24 is_stmt 1 discriminator 3 view .LVU1259
  774:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.c ****   {
  4189              		.loc 1 774 25 is_stmt 0 discriminator 3 view .LVU1260
-ARM GAS  /tmp/ccZl5C54.s 			page 103
+ARM GAS  /tmp/ccnaAMFS.s 			page 103
 
 
  4190 001e 013C     		subs	r4, r4, #1
@@ -6168,60 +6168,60 @@ ARM GAS  /tmp/ccZl5C54.s 			page 1
  4222              		.file 5 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h"
  4223              		.file 6 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_usb.h"
  4224              		.file 7 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
-ARM GAS  /tmp/ccZl5C54.s 			page 104
+ARM GAS  /tmp/ccnaAMFS.s 			page 104
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f0xx_ll_usb.c
-     /tmp/ccZl5C54.s:16     .text.USB_CoreInit:0000000000000000 $t
-     /tmp/ccZl5C54.s:24     .text.USB_CoreInit:0000000000000000 USB_CoreInit
-     /tmp/ccZl5C54.s:54     .text.USB_EnableGlobalInt:0000000000000000 $t
-     /tmp/ccZl5C54.s:61     .text.USB_EnableGlobalInt:0000000000000000 USB_EnableGlobalInt
-     /tmp/ccZl5C54.s:92     .text.USB_EnableGlobalInt:0000000000000010 $d
-     /tmp/ccZl5C54.s:97     .text.USB_DisableGlobalInt:0000000000000000 $t
-     /tmp/ccZl5C54.s:104    .text.USB_DisableGlobalInt:0000000000000000 USB_DisableGlobalInt
-     /tmp/ccZl5C54.s:131    .text.USB_DisableGlobalInt:0000000000000010 $d
-     /tmp/ccZl5C54.s:136    .text.USB_SetCurrentMode:0000000000000000 $t
-     /tmp/ccZl5C54.s:143    .text.USB_SetCurrentMode:0000000000000000 USB_SetCurrentMode
-     /tmp/ccZl5C54.s:164    .text.USB_DevInit:0000000000000000 $t
-     /tmp/ccZl5C54.s:171    .text.USB_DevInit:0000000000000000 USB_DevInit
-     /tmp/ccZl5C54.s:216    .text.USB_ActivateEndpoint:0000000000000000 $t
-     /tmp/ccZl5C54.s:223    .text.USB_ActivateEndpoint:0000000000000000 USB_ActivateEndpoint
-     /tmp/ccZl5C54.s:1076   .text.USB_ActivateEndpoint:00000000000002d4 $d
-     /tmp/ccZl5C54.s:1094   .text.USB_DeactivateEndpoint:0000000000000000 $t
-     /tmp/ccZl5C54.s:1101   .text.USB_DeactivateEndpoint:0000000000000000 USB_DeactivateEndpoint
-     /tmp/ccZl5C54.s:1522   .text.USB_DeactivateEndpoint:0000000000000158 $d
-     /tmp/ccZl5C54.s:1533   .text.USB_EPSetStall:0000000000000000 $t
-     /tmp/ccZl5C54.s:1540   .text.USB_EPSetStall:0000000000000000 USB_EPSetStall
-     /tmp/ccZl5C54.s:1623   .text.USB_EPSetStall:0000000000000040 $d
-     /tmp/ccZl5C54.s:1631   .text.USB_EPClearStall:0000000000000000 $t
-     /tmp/ccZl5C54.s:1638   .text.USB_EPClearStall:0000000000000000 USB_EPClearStall
-     /tmp/ccZl5C54.s:1808   .text.USB_EPClearStall:0000000000000084 $d
-     /tmp/ccZl5C54.s:1818   .text.USB_StopDevice:0000000000000000 $t
-     /tmp/ccZl5C54.s:1825   .text.USB_StopDevice:0000000000000000 USB_StopDevice
-     /tmp/ccZl5C54.s:1858   .text.USB_SetDevAddress:0000000000000000 $t
-     /tmp/ccZl5C54.s:1865   .text.USB_SetDevAddress:0000000000000000 USB_SetDevAddress
-     /tmp/ccZl5C54.s:1894   .text.USB_DevConnect:0000000000000000 $t
-     /tmp/ccZl5C54.s:1901   .text.USB_DevConnect:0000000000000000 USB_DevConnect
-     /tmp/ccZl5C54.s:1927   .text.USB_DevConnect:0000000000000010 $d
-     /tmp/ccZl5C54.s:1932   .text.USB_DevDisconnect:0000000000000000 $t
-     /tmp/ccZl5C54.s:1939   .text.USB_DevDisconnect:0000000000000000 USB_DevDisconnect
-     /tmp/ccZl5C54.s:1965   .text.USB_ReadInterrupts:0000000000000000 $t
-     /tmp/ccZl5C54.s:1972   .text.USB_ReadInterrupts:0000000000000000 USB_ReadInterrupts
-     /tmp/ccZl5C54.s:1997   .text.USB_ActivateRemoteWakeup:0000000000000000 $t
-     /tmp/ccZl5C54.s:2004   .text.USB_ActivateRemoteWakeup:0000000000000000 USB_ActivateRemoteWakeup
-     /tmp/ccZl5C54.s:2031   .text.USB_DeActivateRemoteWakeup:0000000000000000 $t
-     /tmp/ccZl5C54.s:2038   .text.USB_DeActivateRemoteWakeup:0000000000000000 USB_DeActivateRemoteWakeup
-     /tmp/ccZl5C54.s:2064   .text.USB_WritePMA:0000000000000000 $t
-     /tmp/ccZl5C54.s:2071   .text.USB_WritePMA:0000000000000000 USB_WritePMA
-     /tmp/ccZl5C54.s:2153   .text.USB_EPStartXfer:0000000000000000 $t
-     /tmp/ccZl5C54.s:2160   .text.USB_EPStartXfer:0000000000000000 USB_EPStartXfer
-     /tmp/ccZl5C54.s:3051   .text.USB_EPStartXfer:0000000000000318 $d
-     /tmp/ccZl5C54.s:3066   .text.USB_EPStartXfer:000000000000033c $t
-     /tmp/ccZl5C54.s:4006   .text.USB_EPStartXfer:0000000000000668 $d
-     /tmp/ccZl5C54.s:4024   .text.USB_EPStartXfer:000000000000068c $t
-     /tmp/ccZl5C54.s:4113   .text.USB_EPStartXfer:00000000000006d8 $d
-     /tmp/ccZl5C54.s:4119   .text.USB_ReadPMA:0000000000000000 $t
-     /tmp/ccZl5C54.s:4126   .text.USB_ReadPMA:0000000000000000 USB_ReadPMA
+     /tmp/ccnaAMFS.s:16     .text.USB_CoreInit:0000000000000000 $t
+     /tmp/ccnaAMFS.s:24     .text.USB_CoreInit:0000000000000000 USB_CoreInit
+     /tmp/ccnaAMFS.s:54     .text.USB_EnableGlobalInt:0000000000000000 $t
+     /tmp/ccnaAMFS.s:61     .text.USB_EnableGlobalInt:0000000000000000 USB_EnableGlobalInt
+     /tmp/ccnaAMFS.s:92     .text.USB_EnableGlobalInt:0000000000000010 $d
+     /tmp/ccnaAMFS.s:97     .text.USB_DisableGlobalInt:0000000000000000 $t
+     /tmp/ccnaAMFS.s:104    .text.USB_DisableGlobalInt:0000000000000000 USB_DisableGlobalInt
+     /tmp/ccnaAMFS.s:131    .text.USB_DisableGlobalInt:0000000000000010 $d
+     /tmp/ccnaAMFS.s:136    .text.USB_SetCurrentMode:0000000000000000 $t
+     /tmp/ccnaAMFS.s:143    .text.USB_SetCurrentMode:0000000000000000 USB_SetCurrentMode
+     /tmp/ccnaAMFS.s:164    .text.USB_DevInit:0000000000000000 $t
+     /tmp/ccnaAMFS.s:171    .text.USB_DevInit:0000000000000000 USB_DevInit
+     /tmp/ccnaAMFS.s:216    .text.USB_ActivateEndpoint:0000000000000000 $t
+     /tmp/ccnaAMFS.s:223    .text.USB_ActivateEndpoint:0000000000000000 USB_ActivateEndpoint
+     /tmp/ccnaAMFS.s:1076   .text.USB_ActivateEndpoint:00000000000002d4 $d
+     /tmp/ccnaAMFS.s:1094   .text.USB_DeactivateEndpoint:0000000000000000 $t
+     /tmp/ccnaAMFS.s:1101   .text.USB_DeactivateEndpoint:0000000000000000 USB_DeactivateEndpoint
+     /tmp/ccnaAMFS.s:1522   .text.USB_DeactivateEndpoint:0000000000000158 $d
+     /tmp/ccnaAMFS.s:1533   .text.USB_EPSetStall:0000000000000000 $t
+     /tmp/ccnaAMFS.s:1540   .text.USB_EPSetStall:0000000000000000 USB_EPSetStall
+     /tmp/ccnaAMFS.s:1623   .text.USB_EPSetStall:0000000000000040 $d
+     /tmp/ccnaAMFS.s:1631   .text.USB_EPClearStall:0000000000000000 $t
+     /tmp/ccnaAMFS.s:1638   .text.USB_EPClearStall:0000000000000000 USB_EPClearStall
+     /tmp/ccnaAMFS.s:1808   .text.USB_EPClearStall:0000000000000084 $d
+     /tmp/ccnaAMFS.s:1818   .text.USB_StopDevice:0000000000000000 $t
+     /tmp/ccnaAMFS.s:1825   .text.USB_StopDevice:0000000000000000 USB_StopDevice
+     /tmp/ccnaAMFS.s:1858   .text.USB_SetDevAddress:0000000000000000 $t
+     /tmp/ccnaAMFS.s:1865   .text.USB_SetDevAddress:0000000000000000 USB_SetDevAddress
+     /tmp/ccnaAMFS.s:1894   .text.USB_DevConnect:0000000000000000 $t
+     /tmp/ccnaAMFS.s:1901   .text.USB_DevConnect:0000000000000000 USB_DevConnect
+     /tmp/ccnaAMFS.s:1927   .text.USB_DevConnect:0000000000000010 $d
+     /tmp/ccnaAMFS.s:1932   .text.USB_DevDisconnect:0000000000000000 $t
+     /tmp/ccnaAMFS.s:1939   .text.USB_DevDisconnect:0000000000000000 USB_DevDisconnect
+     /tmp/ccnaAMFS.s:1965   .text.USB_ReadInterrupts:0000000000000000 $t
+     /tmp/ccnaAMFS.s:1972   .text.USB_ReadInterrupts:0000000000000000 USB_ReadInterrupts
+     /tmp/ccnaAMFS.s:1997   .text.USB_ActivateRemoteWakeup:0000000000000000 $t
+     /tmp/ccnaAMFS.s:2004   .text.USB_ActivateRemoteWakeup:0000000000000000 USB_ActivateRemoteWakeup
+     /tmp/ccnaAMFS.s:2031   .text.USB_DeActivateRemoteWakeup:0000000000000000 $t
+     /tmp/ccnaAMFS.s:2038   .text.USB_DeActivateRemoteWakeup:0000000000000000 USB_DeActivateRemoteWakeup
+     /tmp/ccnaAMFS.s:2064   .text.USB_WritePMA:0000000000000000 $t
+     /tmp/ccnaAMFS.s:2071   .text.USB_WritePMA:0000000000000000 USB_WritePMA
+     /tmp/ccnaAMFS.s:2153   .text.USB_EPStartXfer:0000000000000000 $t
+     /tmp/ccnaAMFS.s:2160   .text.USB_EPStartXfer:0000000000000000 USB_EPStartXfer
+     /tmp/ccnaAMFS.s:3051   .text.USB_EPStartXfer:0000000000000318 $d
+     /tmp/ccnaAMFS.s:3066   .text.USB_EPStartXfer:000000000000033c $t
+     /tmp/ccnaAMFS.s:4006   .text.USB_EPStartXfer:0000000000000668 $d
+     /tmp/ccnaAMFS.s:4024   .text.USB_EPStartXfer:000000000000068c $t
+     /tmp/ccnaAMFS.s:4113   .text.USB_EPStartXfer:00000000000006d8 $d
+     /tmp/ccnaAMFS.s:4119   .text.USB_ReadPMA:0000000000000000 $t
+     /tmp/ccnaAMFS.s:4126   .text.USB_ReadPMA:0000000000000000 USB_ReadPMA
 
 NO UNDEFINED SYMBOLS
