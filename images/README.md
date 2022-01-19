@@ -1,0 +1,6 @@
+![front](images/front.jpg)
+![open](images/open.jpg)
+![inputs](images/inputs.jpg)
+![back](images/back.jpg)
+![front_connected](images/front_connected.jpg)
+![front_sakura](images/front_sakura.jpg)
