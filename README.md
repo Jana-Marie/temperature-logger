@@ -2,7 +2,11 @@
 
 Anotter USB temperature logger that can record up to four channels with thermocouple or NTCs connected via CDC directly or SCPI to USB. You can choose how you want to receive the data by moving the selector switch next to the Type-C receptacle. If you switch to CSV, it will simply output all connected channels to your console in a machine and human readable format (CSV or TSV, I prefer TSV) at about 10 readings per second. If you switch to SCPI, an SCPI terminal is displayed via USB so that you can integrate the logger into your lab equipment. This is particularly handy because you can also use it to control the OC- or H-Bridge outputs, which turns the logger into a thermal IO card. This can be useful when working with Peltier- and heating elements.
 
+![front](images/front.jpg)
+
 Having needed a temperature logger several times in the past, after hacking two together for spontaneous testing, I decided to develop a proper one. This is my result. :3
+
+![open](images/open.jpg)
 
 ### Inputs
 
@@ -14,7 +18,9 @@ One MAX31855KASA can be populated per channel, enabling the reading of K-type th
 
 *NTC*
 
-The NTC amplifier is based on (this appnote)[https://www.ti.com/lit/an/sboa323a/sboa323a.pdf] and allows amplification of small ranges to the full ADC range. This was an important motivation for this project as I needed a multi-channel body temperature logger.
+The NTC amplifier is based on [this appnote](https://www.ti.com/lit/an/sboa323a/sboa323a.pdf) and allows amplification of small ranges to the full ADC range. This was an important motivation for this project as I needed a multi-channel body temperature logger.
+
+![inputs](images/inputs.jpg)
 
 ### License
 
