@@ -6,8 +6,8 @@ GraphedExpression="adc[3]", DisplayFormat=DISPLAY_FORMAT_DEC
 GraphedExpression="adc[2]", DisplayFormat=DISPLAY_FORMAT_DEC
 GraphedExpression="adc[1]", DisplayFormat=DISPLAY_FORMAT_DEC
 GraphedExpression="adc[0]", DisplayFormat=DISPLAY_FORMAT_DEC
-OpenDocument="main.c", FilePath="/home/janamarie/Documents/AugmentalTech/temperature-logger/firmware/Core/Src/main.c", Line=27
-OpenDocument="startup_stm32f072xb.s", FilePath="/home/janamarie/Documents/AugmentalTech/temperature-logger/firmware/startup_stm32f072xb.s", Line=38
+OpenDocument="main.c", FilePath="/home/janamarie/Documents/AugmentalTech/temperature-logger/firmware/Core/Src/main.c", Line=32
+OpenDocument="startup_stm32f072xb.s", FilePath="/home/janamarie/Documents/AugmentalTech/temperature-logger/firmware/startup_stm32f072xb.s", Line=37
 OpenDocument="system_stm32f0xx.c", FilePath="/home/janamarie/Documents/AugmentalTech/temperature-logger/firmware/Core/Src/system_stm32f0xx.c", Line=113
 OpenDocument="stm32f0xx_hal_i2c_ex.c", FilePath="/home/janamarie/Documents/AugmentalTech/temperature-logger/firmware/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c", Line=160
 OpenDocument="stm32f0xx_hal_tim_ex.c", FilePath="/home/janamarie/Documents/AugmentalTech/temperature-logger/firmware/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c", Line=2041
@@ -16,17 +16,17 @@ OpenDocument="stm32f0xx_hal_spi.c", FilePath="/home/janamarie/Documents/Augmenta
 OpenDocument="stm32f0xx_hal_pcd.c", FilePath="/home/janamarie/Documents/AugmentalTech/temperature-logger/firmware/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pcd.c", Line=177
 OpenDocument="stm32f0xx_hal_tim.c", FilePath="/home/janamarie/Documents/AugmentalTech/temperature-logger/firmware/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c", Line=7071
 OpenToolbar="Debug", Floating=0, x=0, y=0
-OpenWindow="Registers 1", DockArea=RIGHT, x=0, y=2, w=931, h=255, FilterBarShown=0, ToolBarShown=0, FilteredItems=[], RefreshRate=1
-OpenWindow="Disassembly", DockArea=RIGHT, x=0, y=1, w=931, h=259, FilterBarShown=0, ToolBarShown=0, ExecCountersShown=0, InstEncodingsShown=0
+OpenWindow="Registers 1", DockArea=RIGHT, x=0, y=2, w=931, h=76, FilterBarShown=0, ToolBarShown=0, FilteredItems=[], RefreshRate=1
+OpenWindow="Disassembly", DockArea=RIGHT, x=0, y=1, w=931, h=93, FilterBarShown=0, ToolBarShown=0, ExecCountersShown=0, InstEncodingsShown=0
 OpenWindow="Source", x=0, y=0, w=0, h=0, FilterBarShown=0, ToolBarShown=0, ExecCountersShown=0
-OpenWindow="Watched Data", DockArea=RIGHT, x=0, y=0, w=931, h=482, FilterBarShown=0, ToolBarShown=0
-OpenWindow="Functions", DockArea=LEFT, x=0, y=0, w=86, h=1008, FilterBarShown=1, ToolBarShown=0
-OpenWindow="Data Graph", DockArea=BOTTOM, x=0, y=0, w=1940, h=512, FilterBarShown=0, ToolBarShown=0, VisibleTab=2, SamplingFreq=0 Hz, ClearEvent=RESUME, LegendShown=0, UniformSampleSpacing=0, PinCursor=-1, TimePerDiv=1000000
-OpenWindow="Console", DockArea=BOTTOM, x=1, y=0, w=885, h=512, FilterBarShown=0, ToolBarShown=0
+OpenWindow="Watched Data", DockArea=RIGHT, x=0, y=0, w=931, h=820, FilterBarShown=0, ToolBarShown=0
+OpenWindow="Functions", DockArea=LEFT, x=0, y=0, w=86, h=1001, FilterBarShown=1, ToolBarShown=0
+OpenWindow="Data Graph", DockArea=BOTTOM, x=0, y=0, w=1937, h=512, FilterBarShown=0, ToolBarShown=0, VisibleTab=2, SamplingFreq=0 Hz, ClearEvent=RESUME, LegendShown=0, UniformSampleSpacing=0, PinCursor=-1, TimePerDiv=1000000
+OpenWindow="Console", DockArea=BOTTOM, x=1, y=0, w=882, h=512, FilterBarShown=0, ToolBarShown=0
 TableHeader="Watched Data", SortCol="Expression", SortOrder="ASCENDING", VisibleCols=["Expression";"Value";"Location";"Refresh"], ColWidths=[314;308;68;241]
-TableHeader="Functions", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Address";"Size";"#Insts";"Source"], ColWidths=[27;27;27;27;224]
-TableHeader="Data Graph", SortCol="None", SortOrder="ASCENDING", VisibleCols=["Index";"Time                    ";" temp_int";" adc[4]";" adc[5]";" adc[3]";" adc[2]";" adc[1]";" adc[0]"], ColWidths=[84;51;71;71;57;78;91;101;104]
-TableHeader="Data Graph", SortCol="Expression", SortOrder="DESCENDING", VisibleCols=["Expression";"Type";"Value";"Min";"Max";"Average";"# Changes";"Min. Change";"Max. Change"], ColWidths=[84;51;55;49;56;70;83;93;427]
+TableHeader="Functions", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Address";"Size";"#Insts";"Source"], ColWidths=[27;112;22;27;254]
+TableHeader="Data Graph", SortCol="Index", SortOrder="ASCENDING", VisibleCols=["Index";"Time                    ";" temp_int";" adc[4]";" adc[5]";" adc[3]";" adc[2]";" adc[1]";" adc[0]"], ColWidths=[84;51;71;35;35;35;35;35;113]
+TableHeader="Data Graph", SortCol="Expression", SortOrder="DESCENDING", VisibleCols=["Expression";"Type";"Value";"Min";"Max";"Average";"# Changes";"Min. Change";"Max. Change"], ColWidths=[92;54;58;54;54;75;90;101;1358]
 TableHeader="Power Graph", SortCol="Index", SortOrder="ASCENDING", VisibleCols=["Index";"Time";"Channel 0"], ColWidths=[84;119;126]
 TableHeader="Registers 1", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Description"], ColWidths=[120;92;704]
 TableHeader="RegisterSelectionDialog", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Auto";"Name";"Address";"Description"], ColWidths=[27;27;27;27]
@@ -36,3 +36,6 @@ WatchedExpression="spidat32", RefreshRate=5
 WatchedExpression="tint", RefreshRate=2
 WatchedExpression="temp_int", RefreshRate=5, DisplayFormat=DISPLAY_FORMAT_DEC
 WatchedExpression="adc", RefreshRate=5
+WatchedExpression="tp", RefreshRate=5
+WatchedExpression="tsv_str"
+WatchedExpression="vadc"

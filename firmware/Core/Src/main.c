@@ -40,7 +40,7 @@ static uint32_t vadc[6];
 float tp[6];
 char tsv_str[96];
 
-static uint32_t spidat;
+static uint32_t spidat[4];
 float temp_int;
 
 int main(void)
@@ -116,24 +116,44 @@ uint32_t lsb_to_volt(uint16_t lsb){
 
 // Interrupt
 void temp_timer(){
-  led_set(STATUS, STATE_GREEN);
+  led_set(STATUS, STATE_GREEN); //TODO LED IFNORMATION
 
-  spidat = __builtin_bswap32(spidat);
 
-  for(uint8_t i = 0; i <=5; i++){
-    vadc[i] = lsb_to_volt(adc[i]);
+  // TODO STRUCT
+  uint16_t spi_pins[4] = {NSS3_Pin,NSS2_Pin,NSS1_Pin,NSS0_Pin};
+
+  for(uint8_t i = 0; i <=3; i++){
+    HAL_GPIO_WritePin(GPIOA, spi_pins[i], GPIO_PIN_RESET);
+    HAL_SPI_Receive(&hspi1, (uint8_t *) &spidat[i], sizeof spidat,1); // TODO DMA and DYNAMIC IC finding
+    spidat[i] = __builtin_bswap32(spidat[i]);
+    tp[i] = MAX31855_get_twarm(spidat[i]);
+    HAL_GPIO_WritePin(GPIOA, spi_pins[i], GPIO_PIN_SET);
   }
 
-  for(uint8_t i = 0; i <=5; i++){
-    tp[i] = volt_to_temp(vadc[i]);
-  }
+  //for(uint8_t i = 0; i <=5; i++){ // TODO REIMPLEMENT AND DYNAMIC
+  //  vadc[i] = lsb_to_volt(adc[i]);
+  //}
+
+  //for(uint8_t i = 0; i <=5; i++){
+  //  tp[i] = volt_to_temp(vadc[i]);
+  //}
 
   memset(tsv_str, 0, sizeof tsv_str);
-  sprintf(tsv_str, "%.4f\t%.4f\t%.4f\t%.4f\t%lu\n\r", tp[0], tp[1], tp[2], tp[3],HAL_GetTick());
+  //sprintf(tsv_str, "%.4f\t""%.4f\t""%.4f\t%.4f\t%lu.0\n\r", tp[3], tp[2], tp[1], tp[0],HAL_GetTick());
+  char tmp_str[24];
+  sprintf(tmp_str, "%lu.0\t", HAL_GetTick());
+  strcat(tsv_str, tmp_str);
+  for(uint8_t i = 0; i <=3; i++){
+    if(tp[i] < 2045){
+        char tmp_str[24];
+        sprintf(tmp_str, "%.4f\t", tp[i]);
+        strcat(tsv_str, tmp_str);
+    }
+  }
+  strcat(tsv_str, "\n");
   CDC_Transmit_FS((uint8_t *) &tsv_str, sizeof tsv_str);
 
-  HAL_GPIO_WritePin(GPIOA, NSS3_Pin|NSS2_Pin|NSS1_Pin|NSS0_Pin, GPIO_PIN_RESET);
-  HAL_SPI_Receive_DMA(&hspi1, (uint8_t *) &spidat, sizeof spidat);
+
 
   led_set(STATUS, STATE_OFF);
 }
