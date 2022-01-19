@@ -12,11 +12,11 @@ Having needed a temperature logger several times in the past, after hacking two 
 
 Each of the four inputs can either be configured as thermocouple or NTC (resistance measuring) input. At the moment they are assembly options, I need to test if I can assmble both at the same time.
 
-*thermocouple*
+**thermocouple**
 
 One MAX31855KASA can be populated per channel, enabling the reading of K-type thermocouples. Other versions of this IC are available if other thermocouple types are required.
 
-*NTC*
+**NTC**
 
 The NTC amplifier is based on [this appnote](https://www.ti.com/lit/an/sboa323a/sboa323a.pdf) and allows amplification of small ranges to the full ADC range. This was an important motivation for this project as I needed a multi-channel body temperature logger.
 
@@ -35,7 +35,7 @@ This source is distributed WITHOUT ANY EXPRESS OR IMPLIED WARRANTY,
 INCLUDING OF MERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A
 PARTICULAR PURPOSE. Please see the CERN-OHL-S v2 for applicable conditions.
 
-Source location: https://github.com/Jana-Marie/electrostatic-adhesion-plate
+Source location: https://github.com/Jana-Marie/temperature-logger
 
 As per CERN-OHL-S v2 section 4, should You produce hardware based on this
 source, You must where practicable maintain the Source Location visible
