@@ -1,4 +1,4 @@
-tmp
-tmp/*
+firmware/tmp*
+firmware/tmp/*
 log
 firmware/build
