@@ -20,6 +20,8 @@ One MAX31855KASA can be populated per channel, enabling the reading of K-type th
 
 The NTC amplifier is based on [this appnote](https://www.ti.com/lit/an/sboa323a/sboa323a.pdf) and allows amplification of small ranges to the full ADC range. This was an important motivation for this project as I needed a multi-channel body temperature logger.
 
+If you want to know more, you can check out the [schematic](https://github.com/Jana-Marie/temperature-logger/blob/main/temperature-logger.pdf).
+
 ![inputs](images/inputs.jpg)
 
 ### License
