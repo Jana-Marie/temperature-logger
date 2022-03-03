@@ -118,7 +118,6 @@ uint32_t lsb_to_volt(uint16_t lsb){
 void temp_timer(){
   led_set(STATUS, STATE_GREEN); //TODO LED IFNORMATION
 
-
   // TODO STRUCT
   uint16_t spi_pins[4] = {NSS3_Pin,NSS2_Pin,NSS1_Pin,NSS0_Pin};
 
@@ -145,15 +144,16 @@ void temp_timer(){
   strcat(tsv_str, tmp_str);
   for(uint8_t i = 0; i <=3; i++){
     if(tp[i] < 2045){
-        char tmp_str[24];
-        sprintf(tmp_str, "%.4f\t", tp[i]);
-        strcat(tsv_str, tmp_str);
+      led_set(i, STATE_GREEN);
+    } else {
+      led_set(i, STATE_RED);
     }
+    char tmp_str[24];
+    sprintf(tmp_str, "%.4f\t", tp[i]);
+    strcat(tsv_str, tmp_str);
   }
   strcat(tsv_str, "\n");
   CDC_Transmit_FS((uint8_t *) &tsv_str, sizeof tsv_str);
-
-
 
   led_set(STATUS, STATE_OFF);
 }
