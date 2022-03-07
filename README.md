@@ -24,6 +24,10 @@ If you want to know more, you can check out the [schematic](https://github.com/J
 
 ![inputs](images/inputs.jpg)
 
+### TODO
+
+ - [ ] implement SCPI
+
 ### License
 
 Copyright Jana Marie Hemsing 2022.
