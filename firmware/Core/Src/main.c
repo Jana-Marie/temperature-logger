@@ -143,15 +143,16 @@ void temp_timer(){
   sprintf(tmp_str, "%lu.0\t", HAL_GetTick());
   strcat(tsv_str, tmp_str);
   for(uint8_t i = 0; i <=3; i++){
-    if(tp[i] < 2045){
-      led_set(i, STATE_GREEN);
-    } else {
-      led_set(i, STATE_RED);
-    }
     char tmp_str[24];
     sprintf(tmp_str, "%.4f\t", tp[i]);
     strcat(tsv_str, tmp_str);
   }
+
+  led_set(LED0, tp[3] < 2045 ? STATE_GREEN : STATE_RED);
+  led_set(LED1, tp[2] < 2045 ? STATE_GREEN : STATE_RED);
+  led_set(LED2, tp[1] < 2045 ? STATE_GREEN : STATE_RED);
+  led_set(LED3, tp[0] < 2045 ? STATE_GREEN : STATE_RED);
+
   strcat(tsv_str, "\n");
   CDC_Transmit_FS((uint8_t *) &tsv_str, sizeof tsv_str);
 
