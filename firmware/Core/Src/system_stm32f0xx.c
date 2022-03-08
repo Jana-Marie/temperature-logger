@@ -6,7 +6,7 @@
   *
   * 1. This file provides two functions and one global variable to be called from
   *    user application:
-  *      - SystemInit(): This function is called at startup just after reset and 
+  *      - SystemInit(): This function is called at startup just after reset and
   *                      before branch to main program. This call is made inside
   *                      the "startup_stm32f0xx.s" file.
   *
@@ -62,7 +62,7 @@
 /** @addtogroup STM32F0xx_System_Private_Defines
   * @{
   */
-#if !defined  (HSE_VALUE) 
+#if !defined  (HSE_VALUE)
   #define HSE_VALUE    ((uint32_t)8000000) /*!< Default value of the External oscillator in Hz.
                                                 This value can be provided and adapted by the user application. */
 #endif /* HSE_VALUE */
@@ -125,14 +125,17 @@ const uint8_t APBPrescTable[8]  = {0, 0, 0, 0, 1, 2, 3, 4};
   * @param  None
   * @retval None
   */
-void SystemInit(void)
-{
-  /* NOTE :SystemInit(): This function is called at startup just after reset and 
-                         before branch to main program. This call is made inside
-                         the "startup_stm32f0xx.s" file.
-                         User can setups the default system clock (System clock source, PLL Multiplier
-                         and Divider factors, AHB/APBx prescalers and Flash settings).
-   */
+void (*SysMemBootJump)(void);
+
+void SystemInit (void) {
+  if ( *((unsigned long *)0x20003FF0) == 0xDEADBEEF ) {
+     *((unsigned long *)0x20003FF0) =  0xCAFEFEED; // Reset our trigger
+    __set_MSP(0x20002250);
+                                                   // 0x1fffC800 is "System Memory" start address for STM32 F0xx
+    SysMemBootJump = (void (*)(void)) (*((uint32_t *) 0x1fffC804)); // Point the PC to the System Memory reset vector (+4)
+    SysMemBootJump();
+    while (1);
+  }
 }
 
 /**
@@ -215,7 +218,7 @@ void SystemCoreClockUpdate (void)
 #else
         /* HSI used as PLL clock source : SystemCoreClock = HSI/2 * PLLMUL */
         SystemCoreClock = (HSI_VALUE >> 1) * pllmull;
-#endif /* STM32F042x6 || STM32F048xx || STM32F070x6 || 
+#endif /* STM32F042x6 || STM32F048xx || STM32F070x6 ||
           STM32F071xB || STM32F072xB || STM32F078xx || STM32F070xB ||
           STM32F091xC || STM32F098xx || STM32F030xC */
       }
@@ -244,4 +247,3 @@ void SystemCoreClockUpdate (void)
   */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
-

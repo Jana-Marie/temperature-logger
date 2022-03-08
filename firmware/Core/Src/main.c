@@ -1,6 +1,9 @@
 #include "main.h"
 #include "led.h"
+#include "usbd_cdc_if.h"
 #include "usb_device.h"
+#include "scpi/scpi.h"
+#include "scpi-def.h"
 
 ADC_HandleTypeDef hadc;
 DMA_HandleTypeDef hdma_adc;
@@ -19,7 +22,6 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
 static void MX_SPI1_Init(void);
-//static void MX_USB_PCD_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_TIM1_Init(void);
 static void MX_ADC_Init(void);
@@ -36,12 +38,17 @@ uint32_t lsb_to_volt(uint16_t lsb);
 float volt_to_temp(uint32_t volt);
 
 static uint32_t adc[6];
-static uint32_t vadc[6];
+//static uint32_t vadc[6];
 float tp[6];
 char tsv_str[96];
 
 static uint32_t spidat[4];
 float temp_int;
+
+extern uint8_t UserRxBufferFS[APP_RX_DATA_SIZE];
+extern uint8_t UserTxBufferFS[APP_TX_DATA_SIZE];
+uint8_t is_new_data_ready;
+uint16_t new_data_length;
 
 int main(void)
 {
@@ -50,14 +57,24 @@ int main(void)
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_SPI1_Init();
-  //MX_USB_PCD_Init();
   MX_I2C1_Init();
   MX_TIM1_Init();
   MX_ADC_Init();
   MX_TIM2_Init();
   MX_USB_DEVICE_Init();
 
-  //MX_USB_HID_INIT();
+  if (HAL_GPIO_ReadPin(SW_SCPI_CSV_GPIO_Port, SW_SCPI_CSV_Pin)){
+
+  } else {
+    SCPI_Init(&scpi_context,
+              scpi_commands,
+              &scpi_interface,
+              scpi_units_def,
+              SCPI_IDN1, SCPI_IDN2, SCPI_IDN3, SCPI_IDN4,
+              scpi_input_buffer, SCPI_INPUT_BUFFER_LENGTH,
+              scpi_error_queue_data, SCPI_ERROR_QUEUE_SIZE);
+  }
+
 
   HAL_ADC_Start_DMA(&hadc, adc, 6);
   //HAL_TIM_Base_Start_IT(&htim1);
@@ -73,6 +90,11 @@ int main(void)
 
   while (1)
   {
+    if (is_new_data_ready && !HAL_GPIO_ReadPin(SW_SCPI_CSV_GPIO_Port, SW_SCPI_CSV_Pin)) {
+      //HAL_GPIO_WritePin(GPIOB, LED_ACT_Pin, 1);
+      SCPI_Input(&scpi_context, UserRxBufferFS, new_data_length);
+      is_new_data_ready = 0;
+    }
   }
 }
 
@@ -136,26 +158,25 @@ void temp_timer(){
   //for(uint8_t i = 0; i <=5; i++){
   //  tp[i] = volt_to_temp(vadc[i]);
   //}
-
-  memset(tsv_str, 0, sizeof tsv_str);
-  //sprintf(tsv_str, "%.4f\t""%.4f\t""%.4f\t%.4f\t%lu.0\n\r", tp[3], tp[2], tp[1], tp[0],HAL_GetTick());
-  char tmp_str[24];
-  sprintf(tmp_str, "%lu.0\t", HAL_GetTick());
-  strcat(tsv_str, tmp_str);
-  for(uint8_t i = 0; i <=3; i++){
+  if (HAL_GPIO_ReadPin(SW_SCPI_CSV_GPIO_Port, SW_SCPI_CSV_Pin)){
+    memset(tsv_str, 0, sizeof tsv_str);
+    //sprintf(tsv_str, "%.4f\t""%.4f\t""%.4f\t%.4f\t%lu.0\n\r", tp[3], tp[2], tp[1], tp[0],HAL_GetTick());
     char tmp_str[24];
-    sprintf(tmp_str, "%.4f\t", tp[i]);
+    sprintf(tmp_str, "%lu.0\t", HAL_GetTick());
     strcat(tsv_str, tmp_str);
+    for(uint8_t i = 0; i <=3; i++){
+      char tmp_str[24];
+      sprintf(tmp_str, "%.4f\t", tp[i]);
+      strcat(tsv_str, tmp_str);
+    }
+    strcat(tsv_str, "\n");
+    CDC_Transmit_FS((uint8_t *) &tsv_str, sizeof tsv_str);
   }
 
   led_set(LED0, tp[3] < 2045 ? STATE_GREEN : STATE_RED);
   led_set(LED1, tp[2] < 2045 ? STATE_GREEN : STATE_RED);
   led_set(LED2, tp[1] < 2045 ? STATE_GREEN : STATE_RED);
   led_set(LED3, tp[0] < 2045 ? STATE_GREEN : STATE_RED);
-
-  strcat(tsv_str, "\n");
-  CDC_Transmit_FS((uint8_t *) &tsv_str, sizeof tsv_str);
-
   led_set(STATUS, STATE_OFF);
 }
 

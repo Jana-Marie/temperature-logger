@@ -20,7 +20,7 @@ TARGET = firmware
 # building variables
 ######################################
 # debug build?
-DEBUG = 1
+DEBUG = 0
 # optimization
 OPT = -Og
 
@@ -71,6 +71,19 @@ Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c \
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c \
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c \
 Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c
+
+C_SOURCES += \
+Src/scpi-def.c \
+libscpi/src/error.c \
+libscpi/src/expression.c \
+libscpi/src/fifo.c \
+libscpi/src/ieee488.c \
+libscpi/src/lexer.c \
+libscpi/src/minimal.c \
+libscpi/src/parser.c \
+libscpi/src/units.c \
+libscpi/src/utils.c \
+Src/scpi-com.c
 
 # ASM sources
 ASM_SOURCES =  \
@@ -137,6 +150,8 @@ C_INCLUDES =  \
 -IDrivers/CMSIS/Device/ST/STM32F0xx/Include \
 -IDrivers/CMSIS/Include
 
+C_INCLUDES +=  \
+-Ilibscpi/inc
 
 # compile gcc flags
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
