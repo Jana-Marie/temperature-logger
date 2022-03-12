@@ -27,6 +27,7 @@ If you want to know more, you can check out the [schematic](https://github.com/J
 ### TODO
 
  - [ ] implement SCPI - done in the SCPI branch, check it out, but there is not much space left on the STM32, hence no merge yet
+ - [ ] add sigrok communication/protocol 
 
 ### License
 
