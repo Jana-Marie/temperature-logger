@@ -31,7 +31,7 @@ If you want to know more, you can check out the [schematic](https://github.com/J
 
 ### License
 
-Copyright Jana Marie Hemsing 2022.
+Copyright Jana Marie Hemsing 2023.
 
 This source describes Open Hardware and is licensed under the CERN-OHL-S v2.
 
